@@ -1,0 +1,976 @@
+2025-05-18 13:56:18,538 INFO: 127.0.0.1 - - [18/May/2025 13:56:18] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 13:56:24,112 ERROR: Error fetching orders: 'total'
+2025-05-18 13:56:24,115 INFO: 127.0.0.1 - - [18/May/2025 13:56:24] "[35m[1mPOST /orders HTTP/1.1[0m" 500 -
+2025-05-18 14:05:05,047 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 14:05:07,779 WARNING:  * Debugger is active!
+2025-05-18 14:05:07,824 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:05:09,668 INFO: 127.0.0.1 - - [18/May/2025 14:05:09] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:05:09,963 INFO: 127.0.0.1 - - [18/May/2025 14:05:09] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 14:05:15,256 INFO: 127.0.0.1 - - [18/May/2025 14:05:15] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:05:15,289 INFO: 127.0.0.1 - - [18/May/2025 14:05:15] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:05:16,046 INFO: 127.0.0.1 - - [18/May/2025 14:05:16] "[31m[1mPOST /orders HTTP/1.1[0m" 405 -
+2025-05-18 14:07:10,524 INFO: 127.0.0.1 - - [18/May/2025 14:07:10] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:07:12,630 ERROR: Error fetching all orders: 'str' object has no attribute 'isoformat'
+2025-05-18 14:07:12,631 INFO: 127.0.0.1 - - [18/May/2025 14:07:12] "[35m[1mGET /orders?_=1747573632391 HTTP/1.1[0m" 500 -
+2025-05-18 14:09:28,987 INFO: 127.0.0.1 - - [18/May/2025 14:09:28] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:09:31,042 ERROR: Error fetching all orders: 'str' object has no attribute 'isoformat'
+2025-05-18 14:09:31,043 INFO: 127.0.0.1 - - [18/May/2025 14:09:31] "[35m[1mGET /orders?_=1747573770923 HTTP/1.1[0m" 500 -
+2025-05-18 14:12:05,917 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 14:12:09,371 WARNING:  * Debugger is active!
+2025-05-18 14:12:09,412 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:13:28,368 INFO: 127.0.0.1 - - [18/May/2025 14:13:28] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:13:28,479 INFO: 127.0.0.1 - - [18/May/2025 14:13:28] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 14:13:33,375 INFO: 127.0.0.1 - - [18/May/2025 14:13:33] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:13:33,404 INFO: 127.0.0.1 - - [18/May/2025 14:13:33] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:14:23,052 INFO: 127.0.0.1 - - [18/May/2025 14:14:23] "[33mPOST /admin/update_status HTTP/1.1[0m" 404 -
+2025-05-18 14:15:49,241 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 14:15:50,989 WARNING:  * Debugger is active!
+2025-05-18 14:15:51,009 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:16:00,159 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 14:16:01,580 WARNING:  * Debugger is active!
+2025-05-18 14:16:01,595 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:16:11,013 INFO: 127.0.0.1 - - [18/May/2025 14:16:11] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:16:12,263 INFO: 127.0.0.1 - - [18/May/2025 14:16:12] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 14:16:21,181 INFO: 127.0.0.1 - - [18/May/2025 14:16:21] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:16:21,218 INFO: 127.0.0.1 - - [18/May/2025 14:16:21] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:16:28,355 ERROR: Error updating status for order 3: 'Database' object has no attribute 'rowcount'
+2025-05-18 14:16:28,356 INFO: 127.0.0.1 - - [18/May/2025 14:16:28] "[35m[1mPOST /admin/update_status HTTP/1.1[0m" 500 -
+2025-05-18 14:17:37,988 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 14:17:39,756 WARNING:  * Debugger is active!
+2025-05-18 14:17:39,777 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:17:44,686 INFO: 127.0.0.1 - - [18/May/2025 14:17:44] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:17:45,715 INFO: 127.0.0.1 - - [18/May/2025 14:17:45] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 14:17:52,573 INFO: 127.0.0.1 - - [18/May/2025 14:17:52] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:17:52,615 INFO: 127.0.0.1 - - [18/May/2025 14:17:52] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:18:00,463 INFO: Updated status to 4 for order 4
+2025-05-18 14:18:00,464 INFO: 127.0.0.1 - - [18/May/2025 14:18:00] "POST /admin/update_status HTTP/1.1" 200 -
+2025-05-18 14:18:03,385 ERROR: Error generating tracking number for order 4: 'Database' object has no attribute 'rowcount'
+2025-05-18 14:18:03,386 INFO: 127.0.0.1 - - [18/May/2025 14:18:03] "[35m[1mPOST /admin/generate_tracking HTTP/1.1[0m" 500 -
+2025-05-18 14:18:12,425 INFO: 127.0.0.1 - - [18/May/2025 14:18:12] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:18:57,319 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 14:18:58,873 WARNING:  * Debugger is active!
+2025-05-18 14:18:58,889 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:19:07,200 INFO: 127.0.0.1 - - [18/May/2025 14:19:07] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:19:07,313 INFO: 127.0.0.1 - - [18/May/2025 14:19:07] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 14:19:13,979 INFO: 127.0.0.1 - - [18/May/2025 14:19:13] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:19:14,022 INFO: 127.0.0.1 - - [18/May/2025 14:19:14] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:19:18,369 ERROR: Error generating tracking number for order 5: 'Database' object has no attribute 'rowcount'
+2025-05-18 14:19:18,369 INFO: 127.0.0.1 - - [18/May/2025 14:19:18] "[35m[1mPOST /admin/generate_tracking HTTP/1.1[0m" 500 -
+2025-05-18 14:19:21,569 INFO: 127.0.0.1 - - [18/May/2025 14:19:21] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:19:34,585 INFO: Updated status to 2 for order 5
+2025-05-18 14:19:34,587 INFO: 127.0.0.1 - - [18/May/2025 14:19:34] "POST /admin/update_status HTTP/1.1" 200 -
+2025-05-18 14:20:40,892 INFO: 127.0.0.1 - - [18/May/2025 14:20:40] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:21:24,088 INFO: 127.0.0.1 - - [18/May/2025 14:21:24] "GET / HTTP/1.1" 200 -
+2025-05-18 14:21:24,878 INFO: 127.0.0.1 - - [18/May/2025 14:21:24] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:21:26,118 INFO: 127.0.0.1 - - [18/May/2025 14:21:26] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:21:26,228 INFO: 127.0.0.1 - - [18/May/2025 14:21:26] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:21:26,720 INFO: 127.0.0.1 - - [18/May/2025 14:21:26] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:21:29,112 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 14:21:29,217 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:21:29,228 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:21:29,268 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "[36mGET /static/uploads/503644620_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:29,277 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:29,635 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "[36mGET /static/uploads/503644542_hd_3.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:29,638 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:29,848 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:21:29,850 INFO: 127.0.0.1 - - [18/May/2025 14:21:29] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:30,054 INFO: 127.0.0.1 - - [18/May/2025 14:21:30] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:21:42,641 INFO: 127.0.0.1 - - [18/May/2025 14:21:42] "GET /preview?id=9 HTTP/1.1" 200 -
+2025-05-18 14:21:42,724 INFO: 127.0.0.1 - - [18/May/2025 14:21:42] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:21:42,726 INFO: 127.0.0.1 - - [18/May/2025 14:21:42] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:42,727 INFO: 127.0.0.1 - - [18/May/2025 14:21:42] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:21:42,732 INFO: 127.0.0.1 - - [18/May/2025 14:21:42] "[36mGET /static/uploads/503644567_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,087 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/uploads/503644540_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,097 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/uploads/503644538_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,098 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,110 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/uploads/503644545_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,110 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/uploads/503644542_hd_3.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,117 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,128 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,132 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,133 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 14:21:43,676 INFO: 127.0.0.1 - - [18/May/2025 14:21:43] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:21:46,741 INFO: 127.0.0.1 - - [18/May/2025 14:21:46] "GET /checkout/details/order/9/bbbe0b4847c2 HTTP/1.1" 200 -
+2025-05-18 14:21:46,834 INFO: 127.0.0.1 - - [18/May/2025 14:21:46] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:21:46,842 INFO: 127.0.0.1 - - [18/May/2025 14:21:46] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:21:46,845 INFO: 127.0.0.1 - - [18/May/2025 14:21:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:21:47,304 INFO: 127.0.0.1 - - [18/May/2025 14:21:47] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:21:47,401 INFO: 127.0.0.1 - - [18/May/2025 14:21:47] "GET /checkout/step/details/order/9/bbbe0b4847c2 HTTP/1.1" 200 -
+2025-05-18 14:21:47,464 INFO: 127.0.0.1 - - [18/May/2025 14:21:47] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:22:07,197 INFO: 127.0.0.1 - - [18/May/2025 14:22:07] "POST /contact_details?order_id=9 HTTP/1.1" 200 -
+2025-05-18 14:22:07,348 INFO: 127.0.0.1 - - [18/May/2025 14:22:07] "GET /checkout/step/delivery/order/9/bbbe0b4847c2 HTTP/1.1" 200 -
+2025-05-18 14:22:07,497 INFO: 127.0.0.1 - - [18/May/2025 14:22:07] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 14:22:07,509 INFO: 127.0.0.1 - - [18/May/2025 14:22:07] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 14:22:07,512 INFO: 127.0.0.1 - - [18/May/2025 14:22:07] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 14:22:35,141 INFO: 127.0.0.1 - - [18/May/2025 14:22:35] "POST /delivery?order_id=9 HTTP/1.1" 200 -
+2025-05-18 14:22:35,144 INFO: 127.0.0.1 - - [18/May/2025 14:22:35] "POST /delivery?order_id=9 HTTP/1.1" 200 -
+2025-05-18 14:22:35,233 INFO: 127.0.0.1 - - [18/May/2025 14:22:35] "GET /checkout/step/essentials/order/9/bbbe0b4847c2 HTTP/1.1" 200 -
+2025-05-18 14:22:35,345 INFO: 127.0.0.1 - - [18/May/2025 14:22:35] "GET /checkout/step/essentials/order/9/bbbe0b4847c2 HTTP/1.1" 200 -
+2025-05-18 14:22:35,380 INFO: 127.0.0.1 - - [18/May/2025 14:22:35] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 14:22:35,393 INFO: 127.0.0.1 - - [18/May/2025 14:22:35] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 14:22:35,407 INFO: 127.0.0.1 - - [18/May/2025 14:22:35] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 14:22:35,411 INFO: 127.0.0.1 - - [18/May/2025 14:22:35] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 14:22:55,075 INFO: 127.0.0.1 - - [18/May/2025 14:22:55] "POST /essentials?order_id=9 HTTP/1.1" 200 -
+2025-05-18 14:22:55,153 INFO: 127.0.0.1 - - [18/May/2025 14:22:55] "[35m[1mGET /checkout/step/payment/order/9/bbbe0b4847c2 HTTP/1.1[0m" 500 -
+2025-05-18 14:24:43,305 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/r.py', reloading
+2025-05-18 14:25:00,634 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.43.211:3000
+2025-05-18 14:25:00,635 INFO: [33mPress CTRL+C to quit[0m
+2025-05-18 14:25:00,658 INFO:  * Restarting with stat
+2025-05-18 14:25:02,545 WARNING:  * Debugger is active!
+2025-05-18 14:25:02,581 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:25:04,567 INFO: 127.0.0.1 - - [18/May/2025 14:25:04] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 14:25:04,870 INFO: 127.0.0.1 - - [18/May/2025 14:25:04] "[36mGET /static/uploads/503644620_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:04,880 INFO: 127.0.0.1 - - [18/May/2025 14:25:04] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:04,897 INFO: 127.0.0.1 - - [18/May/2025 14:25:04] "[36mGET /static/uploads/503644561_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:05,601 INFO: 127.0.0.1 - - [18/May/2025 14:25:05] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:05,609 INFO: 127.0.0.1 - - [18/May/2025 14:25:05] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:05,614 INFO: 127.0.0.1 - - [18/May/2025 14:25:05] "[36mGET /static/uploads/503619483_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:05,617 INFO: 127.0.0.1 - - [18/May/2025 14:25:05] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:05,621 INFO: 127.0.0.1 - - [18/May/2025 14:25:05] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:05,626 INFO: 127.0.0.1 - - [18/May/2025 14:25:05] "[36mGET /static/uploads/503644600_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:06,093 INFO: 127.0.0.1 - - [18/May/2025 14:25:06] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:10,869 INFO: 127.0.0.1 - - [18/May/2025 14:25:10] "GET /preview?id=12 HTTP/1.1" 200 -
+2025-05-18 14:25:10,957 INFO: 127.0.0.1 - - [18/May/2025 14:25:10] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:10,975 INFO: 127.0.0.1 - - [18/May/2025 14:25:10] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:10,976 INFO: 127.0.0.1 - - [18/May/2025 14:25:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:10,978 INFO: 127.0.0.1 - - [18/May/2025 14:25:10] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,223 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,223 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,323 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,325 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503619483_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,346 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503619480_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,368 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503619478_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,380 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503644607_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,387 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503644600_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,400 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503644597_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,402 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503644596_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,420 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,425 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,426 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,441 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:11,890 INFO: 127.0.0.1 - - [18/May/2025 14:25:11] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,418 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 14:25:37,557 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,561 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,561 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,568 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/uploads/503644617_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,892 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,914 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/uploads/503619480_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,918 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/uploads/503644545_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,923 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:37,925 INFO: 127.0.0.1 - - [18/May/2025 14:25:37] "[36mGET /static/uploads/503644596_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:38,229 INFO: 127.0.0.1 - - [18/May/2025 14:25:38] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,533 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "GET /preview?id=8 HTTP/1.1" 200 -
+2025-05-18 14:25:39,721 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/uploads/503644561_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,723 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,731 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,732 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,913 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,922 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/uploads/503644563_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,924 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,933 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,949 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,963 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:39,975 INFO: 127.0.0.1 - - [18/May/2025 14:25:39] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:40,360 INFO: 127.0.0.1 - - [18/May/2025 14:25:40] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,109 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 14:25:43,202 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,210 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,211 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,215 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/uploads/503644620_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,426 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/uploads/503644567_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,428 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,436 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,444 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,445 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:43,780 INFO: 127.0.0.1 - - [18/May/2025 14:25:43] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,072 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "GET /preview?id=12 HTTP/1.1" 200 -
+2025-05-18 14:25:46,233 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,235 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,240 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,244 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,455 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,456 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,460 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503619480_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,465 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503619478_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,473 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503644607_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,484 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,484 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503619483_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,490 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503644596_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,494 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503644597_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,500 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503644600_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,509 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,510 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,514 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,516 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:25:46,707 INFO: 127.0.0.1 - - [18/May/2025 14:25:46] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:25:54,337 INFO: 127.0.0.1 - - [18/May/2025 14:25:54] "[32mGET /admin/puppies HTTP/1.1[0m" 302 -
+2025-05-18 14:25:54,415 INFO: 127.0.0.1 - - [18/May/2025 14:25:54] "GET /admin/login?next=http://127.0.0.1:3000/admin/puppies HTTP/1.1" 200 -
+2025-05-18 14:25:59,286 INFO: 127.0.0.1 - - [18/May/2025 14:25:59] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/puppies HTTP/1.1[0m" 302 -
+2025-05-18 14:25:59,322 INFO: 127.0.0.1 - - [18/May/2025 14:25:59] "GET /admin/puppies HTTP/1.1" 200 -
+2025-05-18 14:26:00,244 INFO: 127.0.0.1 - - [18/May/2025 14:26:00] "GET /admin/get_puppies HTTP/1.1" 200 -
+2025-05-18 14:26:05,119 INFO: 127.0.0.1 - - [18/May/2025 14:26:05] "GET /admin/get_puppy/12 HTTP/1.1" 200 -
+2025-05-18 14:26:27,361 INFO: 127.0.0.1 - - [18/May/2025 14:26:27] "DELETE /admin/delete_puppy/12 HTTP/1.1" 200 -
+2025-05-18 14:26:27,370 INFO: 127.0.0.1 - - [18/May/2025 14:26:27] "GET /admin/get_puppies HTTP/1.1" 200 -
+2025-05-18 14:26:29,963 INFO: 127.0.0.1 - - [18/May/2025 14:26:29] "[33mGET /preview?id=12 HTTP/1.1[0m" 404 -
+2025-05-18 14:26:33,536 INFO: 127.0.0.1 - - [18/May/2025 14:26:33] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:26:34,930 INFO: 127.0.0.1 - - [18/May/2025 14:26:34] "GET /preview?id=7 HTTP/1.1" 200 -
+2025-05-18 14:26:35,077 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,272 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,276 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/uploads/503644617_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,285 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/uploads/503644614_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,360 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/uploads/503644622_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,363 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/uploads/503644620_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,376 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,378 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,381 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,386 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,390 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 14:26:35,693 INFO: 127.0.0.1 - - [18/May/2025 14:26:35] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 14:26:38,929 INFO: 127.0.0.1 - - [18/May/2025 14:26:38] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:32:31,339 INFO: 127.0.0.1 - - [18/May/2025 14:32:31] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:33:10,240 INFO: 127.0.0.1 - - [18/May/2025 14:33:10] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:33:26,483 INFO: 127.0.0.1 - - [18/May/2025 14:33:26] "[33mPOST /admin/delete_orders HTTP/1.1[0m" 404 -
+2025-05-18 14:36:22,287 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 14:36:22,621 INFO:  * Restarting with stat
+2025-05-18 14:36:24,797 WARNING:  * Debugger is active!
+2025-05-18 14:36:24,839 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:36:26,704 INFO: 127.0.0.1 - - [18/May/2025 14:36:26] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:36:26,830 INFO: 127.0.0.1 - - [18/May/2025 14:36:26] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 14:36:31,484 INFO: 127.0.0.1 - - [18/May/2025 14:36:31] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:36:31,543 INFO: 127.0.0.1 - - [18/May/2025 14:36:31] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:36:37,209 INFO: 127.0.0.1 - - [18/May/2025 14:36:37] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 14:36:43,947 INFO: 127.0.0.1 - - [18/May/2025 14:36:43] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:36:57,128 ERROR: Error generating tracking number for order 6: 'Database' object has no attribute 'rowcount'
+2025-05-18 14:36:57,136 INFO: 127.0.0.1 - - [18/May/2025 14:36:57] "[35m[1mPOST /admin/generate_tracking HTTP/1.1[0m" 500 -
+2025-05-18 14:37:01,726 INFO: 127.0.0.1 - - [18/May/2025 14:37:01] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:37:18,711 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 14:37:18,910 INFO:  * Restarting with stat
+2025-05-18 14:37:20,399 WARNING:  * Debugger is active!
+2025-05-18 14:37:20,444 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:37:23,233 INFO: 127.0.0.1 - - [18/May/2025 14:37:23] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:37:23,280 INFO: 127.0.0.1 - - [18/May/2025 14:37:23] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 14:37:28,858 INFO: 127.0.0.1 - - [18/May/2025 14:37:28] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 14:37:28,883 INFO: 127.0.0.1 - - [18/May/2025 14:37:28] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:37:31,816 INFO: 127.0.0.1 - - [18/May/2025 14:37:31] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:37:36,474 INFO: Generated tracking number TRK-7CZ4E7GQM for order 7
+2025-05-18 14:37:36,475 INFO: 127.0.0.1 - - [18/May/2025 14:37:36] "POST /admin/generate_tracking HTTP/1.1" 200 -
+2025-05-18 14:38:03,809 INFO: 127.0.0.1 - - [18/May/2025 14:38:03] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 14:38:17,045 INFO: 127.0.0.1 - - [18/May/2025 14:38:17] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 14:38:21,572 INFO: 127.0.0.1 - - [18/May/2025 14:38:21] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 14:39:10,680 INFO: 127.0.0.1 - - [18/May/2025 14:39:10] "GET /admin/settings HTTP/1.1" 200 -
+2025-05-18 14:39:11,954 INFO: 127.0.0.1 - - [18/May/2025 14:39:11] "GET /admin/get_settings HTTP/1.1" 200 -
+2025-05-18 14:39:12,017 INFO: 127.0.0.1 - - [18/May/2025 14:39:12] "[36mGET /static/uploads/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 14:39:20,783 INFO: 127.0.0.1 - - [18/May/2025 14:39:20] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-05-18 14:39:38,381 INFO: 127.0.0.1 - - [18/May/2025 14:39:38] "GET /admin/puppies HTTP/1.1" 200 -
+2025-05-18 14:39:39,290 INFO: 127.0.0.1 - - [18/May/2025 14:39:39] "GET /admin/get_puppies HTTP/1.1" 200 -
+2025-05-18 14:47:10,449 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/checkout.py', reloading
+2025-05-18 14:47:11,168 INFO:  * Restarting with stat
+2025-05-18 14:47:13,528 WARNING:  * Debugger is active!
+2025-05-18 14:47:13,573 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 14:47:18,672 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/r.py', reloading
+2025-05-18 14:47:18,863 INFO:  * Restarting with stat
+2025-05-18 14:49:12,357 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.43.211:3000
+2025-05-18 14:49:12,358 INFO: [33mPress CTRL+C to quit[0m
+2025-05-18 14:49:12,371 INFO:  * Restarting with stat
+2025-05-18 14:49:13,569 WARNING:  * Debugger is active!
+2025-05-18 14:49:13,595 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:08:01,861 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:08:02,291 INFO:  * Restarting with stat
+2025-05-18 15:08:03,910 WARNING:  * Debugger is active!
+2025-05-18 15:08:03,938 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:08:27,481 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:08:27,626 INFO:  * Restarting with stat
+2025-05-18 15:08:28,885 WARNING:  * Debugger is active!
+2025-05-18 15:08:28,899 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:09:24,600 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:09:24,760 INFO:  * Restarting with stat
+2025-05-18 15:09:26,556 WARNING:  * Debugger is active!
+2025-05-18 15:09:26,581 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:10:03,377 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:10:03,631 INFO:  * Restarting with stat
+2025-05-18 15:10:04,987 WARNING:  * Debugger is active!
+2025-05-18 15:10:05,024 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:10:40,503 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:10:40,635 INFO:  * Restarting with stat
+2025-05-18 15:10:41,985 WARNING:  * Debugger is active!
+2025-05-18 15:10:42,006 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:10:50,279 INFO: 127.0.0.1 - - [18/May/2025 15:10:50] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:10:50,401 INFO: 127.0.0.1 - - [18/May/2025 15:10:50] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 15:10:57,220 INFO: 127.0.0.1 - - [18/May/2025 15:10:57] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:10:57,249 INFO: 127.0.0.1 - - [18/May/2025 15:10:57] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:11:27,272 INFO: 127.0.0.1 - - [18/May/2025 15:11:27] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 15:11:34,208 INFO: 127.0.0.1 - - [18/May/2025 15:11:34] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 15:11:42,154 INFO: 127.0.0.1 - - [18/May/2025 15:11:42] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 15:11:56,271 INFO: 127.0.0.1 - - [18/May/2025 15:11:56] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 15:12:09,270 INFO: 127.0.0.1 - - [18/May/2025 15:12:09] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 15:12:10,106 INFO: 127.0.0.1 - - [18/May/2025 15:12:10] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:12:18,160 INFO: 127.0.0.1 - - [18/May/2025 15:12:18] "POST /admin/delete_orders HTTP/1.1" 200 -
+2025-05-18 15:12:19,541 INFO: 127.0.0.1 - - [18/May/2025 15:12:19] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:12:49,492 INFO: 127.0.0.1 - - [18/May/2025 15:12:49] "GET /preview?id=7 HTTP/1.1" 200 -
+2025-05-18 15:12:49,643 INFO: 127.0.0.1 - - [18/May/2025 15:12:49] "[36mGET /static/uploads/503644617_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:12:49,643 INFO: 127.0.0.1 - - [18/May/2025 15:12:49] "[36mGET /static/uploads/503644614_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:12:49,644 INFO: 127.0.0.1 - - [18/May/2025 15:12:49] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:12:50,604 INFO: 127.0.0.1 - - [18/May/2025 15:12:50] "[36mGET /static/uploads/503644622_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:12:50,605 INFO: 127.0.0.1 - - [18/May/2025 15:12:50] "[36mGET /static/uploads/503644620_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:12:50,809 INFO: 127.0.0.1 - - [18/May/2025 15:12:50] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:12:50,810 INFO: 127.0.0.1 - - [18/May/2025 15:12:50] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:12:50,830 INFO: 127.0.0.1 - - [18/May/2025 15:12:50] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 15:12:50,832 INFO: 127.0.0.1 - - [18/May/2025 15:12:50] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 15:12:50,842 INFO: 127.0.0.1 - - [18/May/2025 15:12:50] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 15:12:50,851 INFO: 127.0.0.1 - - [18/May/2025 15:12:50] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:12:51,254 INFO: 127.0.0.1 - - [18/May/2025 15:12:51] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:12:51,408 INFO: 127.0.0.1 - - [18/May/2025 15:12:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:12:52,584 INFO: 127.0.0.1 - - [18/May/2025 15:12:52] "GET /checkout/details/order/7/ca027bd47f4e HTTP/1.1" 200 -
+2025-05-18 15:12:52,707 INFO: 127.0.0.1 - - [18/May/2025 15:12:52] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:12:52,709 INFO: 127.0.0.1 - - [18/May/2025 15:12:52] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:12:52,712 INFO: 127.0.0.1 - - [18/May/2025 15:12:52] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:12:53,263 INFO: 127.0.0.1 - - [18/May/2025 15:12:53] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:12:53,404 INFO: 127.0.0.1 - - [18/May/2025 15:12:53] "GET /checkout/step/details/order/7/ca027bd47f4e HTTP/1.1" 200 -
+2025-05-18 15:12:53,566 INFO: 127.0.0.1 - - [18/May/2025 15:12:53] "[36mGET /static/uploads/503644614_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:13:12,255 INFO: 127.0.0.1 - - [18/May/2025 15:13:12] "POST /contact_details?order_id=7 HTTP/1.1" 200 -
+2025-05-18 15:13:12,533 INFO: 127.0.0.1 - - [18/May/2025 15:13:12] "GET /checkout/step/delivery/order/7/ca027bd47f4e HTTP/1.1" 200 -
+2025-05-18 15:13:12,711 INFO: 127.0.0.1 - - [18/May/2025 15:13:12] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 15:13:12,722 INFO: 127.0.0.1 - - [18/May/2025 15:13:12] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 15:13:12,722 INFO: 127.0.0.1 - - [18/May/2025 15:13:12] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 15:13:19,090 INFO: 127.0.0.1 - - [18/May/2025 15:13:19] "POST /delivery?order_id=7 HTTP/1.1" 200 -
+2025-05-18 15:13:19,136 INFO: 127.0.0.1 - - [18/May/2025 15:13:19] "POST /delivery?order_id=7 HTTP/1.1" 200 -
+2025-05-18 15:13:19,184 INFO: 127.0.0.1 - - [18/May/2025 15:13:19] "GET /checkout/step/essentials/order/7/ca027bd47f4e HTTP/1.1" 200 -
+2025-05-18 15:13:19,275 INFO: 127.0.0.1 - - [18/May/2025 15:13:19] "GET /checkout/step/essentials/order/7/ca027bd47f4e HTTP/1.1" 200 -
+2025-05-18 15:13:19,294 INFO: 127.0.0.1 - - [18/May/2025 15:13:19] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 15:13:19,300 INFO: 127.0.0.1 - - [18/May/2025 15:13:19] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 15:13:19,316 INFO: 127.0.0.1 - - [18/May/2025 15:13:19] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 15:13:19,321 INFO: 127.0.0.1 - - [18/May/2025 15:13:19] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 15:13:22,559 INFO: 127.0.0.1 - - [18/May/2025 15:13:22] "POST /essentials?order_id=7 HTTP/1.1" 200 -
+2025-05-18 15:13:22,679 INFO: 127.0.0.1 - - [18/May/2025 15:13:22] "GET /checkout/step/payment/order/7/ca027bd47f4e HTTP/1.1" 200 -
+2025-05-18 15:13:43,187 INFO: 127.0.0.1 - - [18/May/2025 15:13:43] "POST /place_adoption HTTP/1.1" 200 -
+2025-05-18 15:13:50,187 INFO: 127.0.0.1 - - [18/May/2025 15:13:50] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:15:33,995 ERROR: Error generating tracking number for order 48: 'contact_info'
+2025-05-18 15:15:34,002 INFO: 127.0.0.1 - - [18/May/2025 15:15:34] "[35m[1mPOST /admin/generate_tracking HTTP/1.1[0m" 500 -
+2025-05-18 15:16:02,675 INFO: 127.0.0.1 - - [18/May/2025 15:16:02] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:16:46,518 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_smtp.py', reloading
+2025-05-18 15:16:46,948 INFO:  * Restarting with stat
+2025-05-18 15:16:49,206 WARNING:  * Debugger is active!
+2025-05-18 15:16:49,245 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:17:37,949 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin.py', reloading
+2025-05-18 15:17:38,285 INFO:  * Restarting with stat
+2025-05-18 15:17:39,909 WARNING:  * Debugger is active!
+2025-05-18 15:17:39,931 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:23:34,623 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:23:34,963 INFO:  * Restarting with stat
+2025-05-18 15:23:36,765 WARNING:  * Debugger is active!
+2025-05-18 15:23:36,835 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:23:39,893 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:23:40,065 INFO:  * Restarting with stat
+2025-05-18 15:23:40,787 WARNING:  * Debugger is active!
+2025-05-18 15:23:40,801 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:23:45,872 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:23:46,016 INFO:  * Restarting with stat
+2025-05-18 15:23:46,963 WARNING:  * Debugger is active!
+2025-05-18 15:23:46,976 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:24:01,480 INFO: 127.0.0.1 - - [18/May/2025 15:24:01] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:24:02,053 INFO: 127.0.0.1 - - [18/May/2025 15:24:02] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 15:24:07,744 INFO: 127.0.0.1 - - [18/May/2025 15:24:07] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:24:07,768 INFO: 127.0.0.1 - - [18/May/2025 15:24:07] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:24:18,051 INFO: Updated status to 2 for order 48
+2025-05-18 15:24:18,053 INFO: 127.0.0.1 - - [18/May/2025 15:24:18] "POST /admin/update_status HTTP/1.1" 200 -
+2025-05-18 15:24:21,630 INFO: 127.0.0.1 - - [18/May/2025 15:24:21] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:24:37,122 INFO: 127.0.0.1 - - [18/May/2025 15:24:37] "GET /checkout/payment/order/7/ca027bd47f4e HTTP/1.1" 200 -
+2025-05-18 15:24:38,881 INFO: 127.0.0.1 - - [18/May/2025 15:24:38] "[32mGET /checkout/step/payment/order/7/ca027bd47f4e HTTP/1.1[0m" 302 -
+2025-05-18 15:24:39,077 INFO: 127.0.0.1 - - [18/May/2025 15:24:39] "GET /checkout/details/order/7/ca027bd47f4e HTTP/1.1" 200 -
+2025-05-18 15:24:42,278 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 15:24:42,449 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:24:42,452 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "[36mGET /static/uploads/503644614_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:42,453 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:24:42,455 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:42,743 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "[36mGET /static/uploads/503644540_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:42,750 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:42,808 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "[36mGET /static/uploads/503619483_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:42,835 INFO: 127.0.0.1 - - [18/May/2025 15:24:42] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:24:43,146 INFO: 127.0.0.1 - - [18/May/2025 15:24:43] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,393 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "GET /preview?id=8 HTTP/1.1" 200 -
+2025-05-18 15:24:45,570 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,576 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,581 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/uploads/503644561_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,581 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,682 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/uploads/503644563_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,706 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,726 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,750 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,766 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,774 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 15:24:45,778 INFO: 127.0.0.1 - - [18/May/2025 15:24:45] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:24:46,202 INFO: 127.0.0.1 - - [18/May/2025 15:24:46] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:24:47,947 INFO: 127.0.0.1 - - [18/May/2025 15:24:47] "GET /checkout/details/order/8/45d10d3f7de2 HTTP/1.1" 200 -
+2025-05-18 15:24:48,093 INFO: 127.0.0.1 - - [18/May/2025 15:24:48] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:24:48,095 INFO: 127.0.0.1 - - [18/May/2025 15:24:48] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:24:48,105 INFO: 127.0.0.1 - - [18/May/2025 15:24:48] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:24:48,517 INFO: 127.0.0.1 - - [18/May/2025 15:24:48] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:24:48,653 INFO: 127.0.0.1 - - [18/May/2025 15:24:48] "GET /checkout/step/details/order/8/45d10d3f7de2 HTTP/1.1" 200 -
+2025-05-18 15:24:48,717 INFO: 127.0.0.1 - - [18/May/2025 15:24:48] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:25:09,908 INFO: 127.0.0.1 - - [18/May/2025 15:25:09] "POST /contact_details?order_id=8 HTTP/1.1" 200 -
+2025-05-18 15:25:09,964 INFO: 127.0.0.1 - - [18/May/2025 15:25:09] "GET /checkout/step/delivery/order/8/45d10d3f7de2 HTTP/1.1" 200 -
+2025-05-18 15:25:10,130 INFO: 127.0.0.1 - - [18/May/2025 15:25:10] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 15:25:10,131 INFO: 127.0.0.1 - - [18/May/2025 15:25:10] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 15:25:10,132 INFO: 127.0.0.1 - - [18/May/2025 15:25:10] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 15:25:14,089 INFO: 127.0.0.1 - - [18/May/2025 15:25:14] "POST /delivery?order_id=8 HTTP/1.1" 200 -
+2025-05-18 15:25:14,116 INFO: 127.0.0.1 - - [18/May/2025 15:25:14] "POST /delivery?order_id=8 HTTP/1.1" 200 -
+2025-05-18 15:25:14,159 INFO: 127.0.0.1 - - [18/May/2025 15:25:14] "GET /checkout/step/essentials/order/8/45d10d3f7de2 HTTP/1.1" 200 -
+2025-05-18 15:25:14,268 INFO: 127.0.0.1 - - [18/May/2025 15:25:14] "GET /checkout/step/essentials/order/8/45d10d3f7de2 HTTP/1.1" 200 -
+2025-05-18 15:25:14,283 INFO: 127.0.0.1 - - [18/May/2025 15:25:14] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 15:25:14,301 INFO: 127.0.0.1 - - [18/May/2025 15:25:14] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 15:25:14,309 INFO: 127.0.0.1 - - [18/May/2025 15:25:14] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 15:25:14,309 INFO: 127.0.0.1 - - [18/May/2025 15:25:14] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 15:25:15,666 INFO: 127.0.0.1 - - [18/May/2025 15:25:15] "POST /essentials?order_id=8 HTTP/1.1" 200 -
+2025-05-18 15:25:15,723 INFO: 127.0.0.1 - - [18/May/2025 15:25:15] "GET /checkout/step/payment/order/8/45d10d3f7de2 HTTP/1.1" 200 -
+2025-05-18 15:25:24,337 INFO: 127.0.0.1 - - [18/May/2025 15:25:24] "POST /place_adoption HTTP/1.1" 200 -
+2025-05-18 15:25:31,808 INFO: 127.0.0.1 - - [18/May/2025 15:25:31] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:25:39,875 ERROR: Error generating tracking number for order 49: 'puppy_id'
+2025-05-18 15:25:39,876 INFO: 127.0.0.1 - - [18/May/2025 15:25:39] "[35m[1mPOST /admin/generate_tracking HTTP/1.1[0m" 500 -
+2025-05-18 15:26:21,800 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:26:22,006 INFO:  * Restarting with stat
+2025-05-18 15:26:23,532 WARNING:  * Debugger is active!
+2025-05-18 15:26:23,549 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:26:26,601 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:26:26,760 INFO:  * Restarting with stat
+2025-05-18 15:26:27,744 WARNING:  * Debugger is active!
+2025-05-18 15:26:27,767 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:26:30,440 INFO: 127.0.0.1 - - [18/May/2025 15:26:30] "GET /checkout/payment/order/8/45d10d3f7de2 HTTP/1.1" 200 -
+2025-05-18 15:26:31,964 INFO: 127.0.0.1 - - [18/May/2025 15:26:31] "[32mGET /checkout/step/payment/order/8/45d10d3f7de2 HTTP/1.1[0m" 302 -
+2025-05-18 15:26:32,051 INFO: 127.0.0.1 - - [18/May/2025 15:26:32] "GET /checkout/details/order/8/45d10d3f7de2 HTTP/1.1" 200 -
+2025-05-18 15:26:35,347 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 15:26:35,547 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:26:35,549 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "[36mGET /static/uploads/503644620_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:26:35,549 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:26:35,728 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "[36mGET /static/uploads/503644545_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:26:35,729 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:26:35,747 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:26:35,747 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:26:35,762 INFO: 127.0.0.1 - - [18/May/2025 15:26:35] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:26:36,169 INFO: 127.0.0.1 - - [18/May/2025 15:26:36] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:29:03,995 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/r.py', reloading
+2025-05-18 15:29:04,308 INFO:  * Restarting with stat
+2025-05-18 15:29:43,820 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.43.211:3000
+2025-05-18 15:29:43,821 INFO: [33mPress CTRL+C to quit[0m
+2025-05-18 15:29:43,840 INFO:  * Restarting with stat
+2025-05-18 15:29:45,454 WARNING:  * Debugger is active!
+2025-05-18 15:29:45,540 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:29:49,981 INFO: 127.0.0.1 - - [18/May/2025 15:29:49] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:29:50,203 INFO: 127.0.0.1 - - [18/May/2025 15:29:50] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 15:30:51,858 INFO: 127.0.0.1 - - [18/May/2025 15:30:51] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:30:51,976 INFO: 127.0.0.1 - - [18/May/2025 15:30:51] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:30:59,202 ERROR: Error generating tracking number for order 48: 'total'
+2025-05-18 15:30:59,203 INFO: 127.0.0.1 - - [18/May/2025 15:30:59] "[35m[1mPOST /admin/generate_tracking HTTP/1.1[0m" 500 -
+2025-05-18 15:33:47,634 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:33:47,882 INFO:  * Restarting with stat
+2025-05-18 15:33:49,894 WARNING:  * Debugger is active!
+2025-05-18 15:33:49,920 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:34:34,335 INFO: 127.0.0.1 - - [18/May/2025 15:34:34] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:34:34,539 INFO: 127.0.0.1 - - [18/May/2025 15:34:34] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 15:34:41,001 INFO: 127.0.0.1 - - [18/May/2025 15:34:41] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:34:41,045 INFO: 127.0.0.1 - - [18/May/2025 15:34:41] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:34:46,645 ERROR: Error generating tracking number for order 48: 'email'
+2025-05-18 15:34:46,647 INFO: 127.0.0.1 - - [18/May/2025 15:34:46] "[35m[1mPOST /admin/generate_tracking HTTP/1.1[0m" 500 -
+2025-05-18 15:35:01,241 INFO: 127.0.0.1 - - [18/May/2025 15:35:01] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:35:34,448 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:35:34,669 INFO:  * Restarting with stat
+2025-05-18 15:35:36,014 WARNING:  * Debugger is active!
+2025-05-18 15:35:36,025 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:35:56,067 INFO: 127.0.0.1 - - [18/May/2025 15:35:56] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:35:56,347 INFO: 127.0.0.1 - - [18/May/2025 15:35:56] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 15:36:01,641 INFO: 127.0.0.1 - - [18/May/2025 15:36:01] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:36:01,662 INFO: 127.0.0.1 - - [18/May/2025 15:36:01] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:36:03,722 ERROR: Error generating tracking number for order 48: [Errno 8] nodename nor servname provided, or not known
+2025-05-18 15:36:03,722 INFO: 127.0.0.1 - - [18/May/2025 15:36:03] "[35m[1mPOST /admin/generate_tracking HTTP/1.1[0m" 500 -
+2025-05-18 15:38:07,594 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:38:07,816 INFO:  * Restarting with stat
+2025-05-18 15:38:09,383 WARNING:  * Debugger is active!
+2025-05-18 15:38:09,437 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:38:12,141 INFO: 127.0.0.1 - - [18/May/2025 15:38:12] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:38:12,266 INFO: 127.0.0.1 - - [18/May/2025 15:38:12] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 15:38:17,744 INFO: 127.0.0.1 - - [18/May/2025 15:38:17] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:38:17,779 INFO: 127.0.0.1 - - [18/May/2025 15:38:17] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:38:23,211 INFO: Confirmation email sent for order 48.
+2025-05-18 15:38:23,211 INFO: Generated tracking number TRK-4822BU36F8 for order 48
+2025-05-18 15:38:23,212 INFO: 127.0.0.1 - - [18/May/2025 15:38:23] "POST /admin/generate_tracking HTTP/1.1" 200 -
+2025-05-18 15:40:01,609 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/admin_orders.py', reloading
+2025-05-18 15:40:01,824 INFO:  * Restarting with stat
+2025-05-18 15:40:03,931 WARNING:  * Debugger is active!
+2025-05-18 15:40:03,958 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:40:18,000 INFO: 127.0.0.1 - - [18/May/2025 15:40:18] "[32mGET /admin/smtp HTTP/1.1[0m" 302 -
+2025-05-18 15:40:18,089 INFO: 127.0.0.1 - - [18/May/2025 15:40:18] "GET /admin/login?next=http://127.0.0.1:3000/admin/smtp HTTP/1.1" 200 -
+2025-05-18 15:40:24,188 INFO: 127.0.0.1 - - [18/May/2025 15:40:24] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/smtp HTTP/1.1[0m" 302 -
+2025-05-18 15:40:24,224 INFO: 127.0.0.1 - - [18/May/2025 15:40:24] "GET /admin/smtp HTTP/1.1" 200 -
+2025-05-18 15:40:49,944 INFO: 127.0.0.1 - - [18/May/2025 15:40:49] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 15:40:50,070 INFO: 127.0.0.1 - - [18/May/2025 15:40:50] "[36mGET /static/uploads/503644620_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:40:50,072 INFO: 127.0.0.1 - - [18/May/2025 15:40:50] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:40:50,074 INFO: 127.0.0.1 - - [18/May/2025 15:40:50] "[36mGET /static/uploads/503644561_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:40:50,986 INFO: 127.0.0.1 - - [18/May/2025 15:40:50] "[36mGET /static/uploads/503644545_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:40:51,001 INFO: 127.0.0.1 - - [18/May/2025 15:40:51] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:40:51,075 INFO: 127.0.0.1 - - [18/May/2025 15:40:51] "[36mGET /static/uploads/503619483_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:40:51,077 INFO: 127.0.0.1 - - [18/May/2025 15:40:51] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:40:51,104 INFO: 127.0.0.1 - - [18/May/2025 15:40:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:40:51,390 INFO: 127.0.0.1 - - [18/May/2025 15:40:51] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:50:35,101 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/checkout.py', reloading
+2025-05-18 15:50:35,573 INFO:  * Restarting with stat
+2025-05-18 15:50:37,138 WARNING:  * Debugger is active!
+2025-05-18 15:50:37,275 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:50:57,576 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/checkout.py', reloading
+2025-05-18 15:50:57,837 INFO:  * Restarting with stat
+2025-05-18 15:50:59,220 WARNING:  * Debugger is active!
+2025-05-18 15:50:59,243 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 15:52:15,073 INFO: 127.0.0.1 - - [18/May/2025 15:52:15] "GET /preview?id=9 HTTP/1.1" 200 -
+2025-05-18 15:52:15,627 INFO: 127.0.0.1 - - [18/May/2025 15:52:15] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:52:15,630 INFO: 127.0.0.1 - - [18/May/2025 15:52:15] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:52:15,639 INFO: 127.0.0.1 - - [18/May/2025 15:52:15] "[36mGET /static/uploads/503644567_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,446 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/uploads/503644540_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,450 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/uploads/503644538_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,467 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,468 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,507 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/uploads/503644542_hd_3.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,645 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/uploads/503644545_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,653 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,658 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,660 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 15:52:16,664 INFO: 127.0.0.1 - - [18/May/2025 15:52:16] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:52:17,036 INFO: 127.0.0.1 - - [18/May/2025 15:52:17] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:52:18,509 INFO: 127.0.0.1 - - [18/May/2025 15:52:18] "GET /checkout/details/order/9/4c6ad8eb5f6d HTTP/1.1" 200 -
+2025-05-18 15:52:18,595 INFO: 127.0.0.1 - - [18/May/2025 15:52:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:18,597 INFO: 127.0.0.1 - - [18/May/2025 15:52:18] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:52:18,612 INFO: 127.0.0.1 - - [18/May/2025 15:52:18] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:52:19,298 INFO: 127.0.0.1 - - [18/May/2025 15:52:19] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:52:19,470 INFO: 127.0.0.1 - - [18/May/2025 15:52:19] "GET /checkout/step/details/order/9/4c6ad8eb5f6d HTTP/1.1" 200 -
+2025-05-18 15:52:19,885 INFO: 127.0.0.1 - - [18/May/2025 15:52:19] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:52:37,456 INFO: 127.0.0.1 - - [18/May/2025 15:52:37] "POST /contact_details?order_id=9 HTTP/1.1" 200 -
+2025-05-18 15:52:37,529 INFO: 127.0.0.1 - - [18/May/2025 15:52:37] "GET /checkout/step/delivery/order/9/4c6ad8eb5f6d HTTP/1.1" 200 -
+2025-05-18 15:52:37,657 INFO: 127.0.0.1 - - [18/May/2025 15:52:37] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:37,663 INFO: 127.0.0.1 - - [18/May/2025 15:52:37] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:37,666 INFO: 127.0.0.1 - - [18/May/2025 15:52:37] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:42,600 INFO: 127.0.0.1 - - [18/May/2025 15:52:42] "POST /delivery?order_id=9 HTTP/1.1" 200 -
+2025-05-18 15:52:42,620 INFO: 127.0.0.1 - - [18/May/2025 15:52:42] "POST /delivery?order_id=9 HTTP/1.1" 200 -
+2025-05-18 15:52:42,653 INFO: 127.0.0.1 - - [18/May/2025 15:52:42] "GET /checkout/step/essentials/order/9/4c6ad8eb5f6d HTTP/1.1" 200 -
+2025-05-18 15:52:42,721 INFO: 127.0.0.1 - - [18/May/2025 15:52:42] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:42,724 INFO: 127.0.0.1 - - [18/May/2025 15:52:42] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:42,727 INFO: 127.0.0.1 - - [18/May/2025 15:52:42] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:42,772 INFO: 127.0.0.1 - - [18/May/2025 15:52:42] "GET /checkout/step/essentials/order/9/4c6ad8eb5f6d HTTP/1.1" 200 -
+2025-05-18 15:52:42,777 INFO: 127.0.0.1 - - [18/May/2025 15:52:42] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 15:52:44,046 INFO: 127.0.0.1 - - [18/May/2025 15:52:44] "POST /essentials?order_id=9 HTTP/1.1" 200 -
+2025-05-18 15:52:44,097 INFO: 127.0.0.1 - - [18/May/2025 15:52:44] "GET /checkout/step/payment/order/9/4c6ad8eb5f6d HTTP/1.1" 200 -
+2025-05-18 15:53:00,456 INFO: 127.0.0.1 - - [18/May/2025 15:53:00] "POST /place_adoption HTTP/1.1" 200 -
+2025-05-18 15:53:00,582 INFO: 127.0.0.1 - - [18/May/2025 15:53:00] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:53:00,582 INFO: 127.0.0.1 - - [18/May/2025 15:53:00] "GET /static/Uploads/503644565_hd.JPG HTTP/1.1" 200 -
+2025-05-18 15:53:00,614 INFO: 127.0.0.1 - - [18/May/2025 15:53:00] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:53:00,925 INFO: 127.0.0.1 - - [18/May/2025 15:53:00] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:53:01,292 INFO: 127.0.0.1 - - [18/May/2025 15:53:01] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:53:50,878 INFO: 127.0.0.1 - - [18/May/2025 15:53:50] "[32mGET /admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:53:51,027 INFO: 127.0.0.1 - - [18/May/2025 15:53:51] "GET /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1" 200 -
+2025-05-18 15:53:59,218 INFO: 127.0.0.1 - - [18/May/2025 15:53:59] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/orders HTTP/1.1[0m" 302 -
+2025-05-18 15:53:59,259 INFO: 127.0.0.1 - - [18/May/2025 15:53:59] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:54:10,071 INFO: Confirmation email sent for order 50.
+2025-05-18 15:54:10,073 INFO: Generated tracking number TRK-50VSZKHWX6 for order 50
+2025-05-18 15:54:10,074 INFO: 127.0.0.1 - - [18/May/2025 15:54:10] "POST /admin/generate_tracking HTTP/1.1" 200 -
+2025-05-18 15:54:25,091 INFO: Updated status to 2 for order 50
+2025-05-18 15:54:25,092 INFO: 127.0.0.1 - - [18/May/2025 15:54:25] "POST /admin/update_status HTTP/1.1" 200 -
+2025-05-18 15:54:36,894 INFO: 127.0.0.1 - - [18/May/2025 15:54:36] "GET /track/TRK-50VSZKHWX6 HTTP/1.1" 200 -
+2025-05-18 15:54:37,127 INFO: 127.0.0.1 - - [18/May/2025 15:54:37] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:54:37,387 INFO: 127.0.0.1 - - [18/May/2025 15:54:37] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:54:38,242 INFO: 127.0.0.1 - - [18/May/2025 15:54:38] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:54:39,186 INFO: 127.0.0.1 - - [18/May/2025 15:54:39] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:54:39,186 INFO: 127.0.0.1 - - [18/May/2025 15:54:39] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:55:10,275 INFO: 127.0.0.1 - - [18/May/2025 15:55:10] "GET /track/TRK-50VSZKHWX6 HTTP/1.1" 200 -
+2025-05-18 15:55:10,359 INFO: 127.0.0.1 - - [18/May/2025 15:55:10] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:55:10,400 INFO: 127.0.0.1 - - [18/May/2025 15:55:10] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:55:10,713 INFO: 127.0.0.1 - - [18/May/2025 15:55:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:55:11,403 INFO: 127.0.0.1 - - [18/May/2025 15:55:11] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:55:15,994 INFO: 127.0.0.1 - - [18/May/2025 15:55:15] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:56:16,446 INFO: 127.0.0.1 - - [18/May/2025 15:56:16] "GET / HTTP/1.1" 200 -
+2025-05-18 15:56:19,064 INFO: 127.0.0.1 - - [18/May/2025 15:56:19] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:56:20,398 INFO: 127.0.0.1 - - [18/May/2025 15:56:20] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-05-18 15:56:26,374 INFO: 127.0.0.1 - - [18/May/2025 15:56:26] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:56:35,491 INFO: Updated status to 3 for order 50
+2025-05-18 15:56:35,492 INFO: 127.0.0.1 - - [18/May/2025 15:56:35] "POST /admin/update_status HTTP/1.1" 200 -
+2025-05-18 15:56:37,000 INFO: 127.0.0.1 - - [18/May/2025 15:56:37] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 15:56:45,314 INFO: 127.0.0.1 - - [18/May/2025 15:56:45] "GET /track/TRK-50VSZKHWX6 HTTP/1.1" 200 -
+2025-05-18 15:56:45,499 INFO: 127.0.0.1 - - [18/May/2025 15:56:45] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:56:45,520 INFO: 127.0.0.1 - - [18/May/2025 15:56:45] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:56:46,013 INFO: 127.0.0.1 - - [18/May/2025 15:56:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:56:47,194 INFO: 127.0.0.1 - - [18/May/2025 15:56:47] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:56:49,774 INFO: 127.0.0.1 - - [18/May/2025 15:56:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:57:51,509 INFO: 127.0.0.1 - - [18/May/2025 15:57:51] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 15:57:51,603 INFO: 127.0.0.1 - - [18/May/2025 15:57:51] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:57:51,607 INFO: 127.0.0.1 - - [18/May/2025 15:57:51] "[36mGET /static/uploads/503644617_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:51,613 INFO: 127.0.0.1 - - [18/May/2025 15:57:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:57:51,616 INFO: 127.0.0.1 - - [18/May/2025 15:57:51] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:52,181 INFO: 127.0.0.1 - - [18/May/2025 15:57:52] "[36mGET /static/uploads/503644540_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:52,341 INFO: 127.0.0.1 - - [18/May/2025 15:57:52] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:52,343 INFO: 127.0.0.1 - - [18/May/2025 15:57:52] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:52,468 INFO: 127.0.0.1 - - [18/May/2025 15:57:52] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:57:52,837 INFO: 127.0.0.1 - - [18/May/2025 15:57:52] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:57:53,897 INFO: 127.0.0.1 - - [18/May/2025 15:57:53] "GET /preview?id=8 HTTP/1.1" 200 -
+2025-05-18 15:57:54,034 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,091 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,101 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/uploads/503644561_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,281 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,281 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/uploads/503644563_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,300 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,302 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,332 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,353 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,355 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:57:54,358 INFO: 127.0.0.1 - - [18/May/2025 15:57:54] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 15:57:55,276 INFO: 127.0.0.1 - - [18/May/2025 15:57:55] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:57:58,470 INFO: 127.0.0.1 - - [18/May/2025 15:57:58] "GET /checkout/details/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 15:57:58,567 INFO: 127.0.0.1 - - [18/May/2025 15:57:58] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 15:57:58,600 INFO: 127.0.0.1 - - [18/May/2025 15:57:58] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 15:57:58,854 INFO: 127.0.0.1 - - [18/May/2025 15:57:58] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 15:57:59,316 INFO: 127.0.0.1 - - [18/May/2025 15:57:59] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 15:57:59,446 INFO: 127.0.0.1 - - [18/May/2025 15:57:59] "GET /checkout/step/details/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 15:57:59,638 INFO: 127.0.0.1 - - [18/May/2025 15:57:59] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 15:58:18,722 INFO: 127.0.0.1 - - [18/May/2025 15:58:18] "POST /contact_details?order_id=8 HTTP/1.1" 200 -
+2025-05-18 15:58:18,764 INFO: 127.0.0.1 - - [18/May/2025 15:58:18] "GET /checkout/step/delivery/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 15:58:18,925 INFO: 127.0.0.1 - - [18/May/2025 15:58:18] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 15:58:18,931 INFO: 127.0.0.1 - - [18/May/2025 15:58:18] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 15:58:18,933 INFO: 127.0.0.1 - - [18/May/2025 15:58:18] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 16:00:51,609 INFO: 127.0.0.1 - - [18/May/2025 16:00:51] "GET /checkout/delivery/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:00:51,893 INFO: 127.0.0.1 - - [18/May/2025 16:00:51] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:00:51,910 INFO: 127.0.0.1 - - [18/May/2025 16:00:51] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:00:52,778 INFO: 127.0.0.1 - - [18/May/2025 16:00:52] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:00:53,278 INFO: 127.0.0.1 - - [18/May/2025 16:00:53] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:00:53,575 INFO: 127.0.0.1 - - [18/May/2025 16:00:53] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:00:53,652 INFO: 127.0.0.1 - - [18/May/2025 16:00:53] "GET /checkout/step/delivery/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:00:54,191 INFO: 127.0.0.1 - - [18/May/2025 16:00:54] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 16:00:54,200 INFO: 127.0.0.1 - - [18/May/2025 16:00:54] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 16:00:54,202 INFO: 127.0.0.1 - - [18/May/2025 16:00:54] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 16:00:54,215 INFO: 127.0.0.1 - - [18/May/2025 16:00:54] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:01:32,387 INFO: 127.0.0.1 - - [18/May/2025 16:01:32] "GET /checkout/delivery/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:01:32,502 INFO: 127.0.0.1 - - [18/May/2025 16:01:32] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:01:32,517 INFO: 127.0.0.1 - - [18/May/2025 16:01:32] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:01:33,108 INFO: 127.0.0.1 - - [18/May/2025 16:01:33] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:01:33,364 INFO: 127.0.0.1 - - [18/May/2025 16:01:33] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:01:33,424 INFO: 127.0.0.1 - - [18/May/2025 16:01:33] "GET /checkout/step/delivery/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:01:33,462 INFO: 127.0.0.1 - - [18/May/2025 16:01:33] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:01:33,609 INFO: 127.0.0.1 - - [18/May/2025 16:01:33] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 16:01:33,613 INFO: 127.0.0.1 - - [18/May/2025 16:01:33] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 16:01:33,620 INFO: 127.0.0.1 - - [18/May/2025 16:01:33] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 16:01:33,623 INFO: 127.0.0.1 - - [18/May/2025 16:01:33] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:02:07,767 INFO: 127.0.0.1 - - [18/May/2025 16:02:07] "POST /delivery?order_id=8 HTTP/1.1" 200 -
+2025-05-18 16:02:07,811 INFO: 127.0.0.1 - - [18/May/2025 16:02:07] "POST /delivery?order_id=8 HTTP/1.1" 200 -
+2025-05-18 16:02:07,855 INFO: 127.0.0.1 - - [18/May/2025 16:02:07] "GET /checkout/step/essentials/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:02:07,874 INFO: 127.0.0.1 - - [18/May/2025 16:02:07] "GET /checkout/step/essentials/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:02:08,651 INFO: 127.0.0.1 - - [18/May/2025 16:02:08] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 16:02:08,667 INFO: 127.0.0.1 - - [18/May/2025 16:02:08] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 16:02:08,680 INFO: 127.0.0.1 - - [18/May/2025 16:02:08] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 16:02:08,684 INFO: 127.0.0.1 - - [18/May/2025 16:02:08] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 16:05:18,132 INFO: 127.0.0.1 - - [18/May/2025 16:05:18] "GET /checkout/essentials/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:05:18,508 INFO: 127.0.0.1 - - [18/May/2025 16:05:18] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:05:18,517 INFO: 127.0.0.1 - - [18/May/2025 16:05:18] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:05:19,005 INFO: 127.0.0.1 - - [18/May/2025 16:05:19] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:05:19,579 INFO: 127.0.0.1 - - [18/May/2025 16:05:19] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:05:19,854 INFO: 127.0.0.1 - - [18/May/2025 16:05:19] "GET /checkout/step/essentials/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:05:20,141 INFO: 127.0.0.1 - - [18/May/2025 16:05:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:05:20,160 INFO: 127.0.0.1 - - [18/May/2025 16:05:20] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 16:05:20,166 INFO: 127.0.0.1 - - [18/May/2025 16:05:20] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 16:05:20,169 INFO: 127.0.0.1 - - [18/May/2025 16:05:20] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 16:05:20,171 INFO: 127.0.0.1 - - [18/May/2025 16:05:20] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:05:20,172 INFO: 127.0.0.1 - - [18/May/2025 16:05:20] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 16:05:42,658 INFO: 127.0.0.1 - - [18/May/2025 16:05:42] "POST /essentials?order_id=8 HTTP/1.1" 200 -
+2025-05-18 16:05:42,675 INFO: 127.0.0.1 - - [18/May/2025 16:05:42] "GET /checkout/step/payment/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:06:47,720 INFO: 127.0.0.1 - - [18/May/2025 16:06:47] "GET /checkout/payment/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:06:48,738 INFO: 127.0.0.1 - - [18/May/2025 16:06:48] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:06:48,742 INFO: 127.0.0.1 - - [18/May/2025 16:06:48] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:06:49,320 INFO: 127.0.0.1 - - [18/May/2025 16:06:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:06:49,837 INFO: 127.0.0.1 - - [18/May/2025 16:06:49] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:06:50,048 INFO: 127.0.0.1 - - [18/May/2025 16:06:50] "GET /checkout/step/payment/order/8/f19723f371f9 HTTP/1.1" 200 -
+2025-05-18 16:06:50,241 INFO: 127.0.0.1 - - [18/May/2025 16:06:50] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:06:50,503 INFO: 127.0.0.1 - - [18/May/2025 16:06:50] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:18,208 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 16:07:18,317 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:18,320 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:18,324 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "[36mGET /static/uploads/503644614_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:18,713 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:18,728 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:18,735 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:18,738 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:18,740 INFO: 127.0.0.1 - - [18/May/2025 16:07:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:19,223 INFO: 127.0.0.1 - - [18/May/2025 16:07:19] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,449 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "GET /preview?id=8 HTTP/1.1" 200 -
+2025-05-18 16:07:20,522 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,531 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,535 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,538 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/uploads/503644561_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,798 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,799 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/uploads/503644563_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,986 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,990 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:20,996 INFO: 127.0.0.1 - - [18/May/2025 16:07:20] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:21,000 INFO: 127.0.0.1 - - [18/May/2025 16:07:21] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 16:07:21,002 INFO: 127.0.0.1 - - [18/May/2025 16:07:21] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:21,346 INFO: 127.0.0.1 - - [18/May/2025 16:07:21] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:07:22,600 INFO: 127.0.0.1 - - [18/May/2025 16:07:22] "GET /checkout/details/order/8/79d3b5b0ae39 HTTP/1.1" 200 -
+2025-05-18 16:07:22,713 INFO: 127.0.0.1 - - [18/May/2025 16:07:22] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:22,714 INFO: 127.0.0.1 - - [18/May/2025 16:07:22] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:22,717 INFO: 127.0.0.1 - - [18/May/2025 16:07:22] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:23,380 INFO: 127.0.0.1 - - [18/May/2025 16:07:23] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:07:23,423 INFO: 127.0.0.1 - - [18/May/2025 16:07:23] "[31m[1mGET /checkout/step/details/order/8/79d3b5b0ae39 HTTP/1.1[0m" 403 -
+2025-05-18 16:07:26,747 INFO: 127.0.0.1 - - [18/May/2025 16:07:26] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 16:07:26,933 INFO: 127.0.0.1 - - [18/May/2025 16:07:26] "[36mGET /static/uploads/503644614_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:26,933 INFO: 127.0.0.1 - - [18/May/2025 16:07:26] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:26,935 INFO: 127.0.0.1 - - [18/May/2025 16:07:26] "[36mGET /static/uploads/503644563_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:26,944 INFO: 127.0.0.1 - - [18/May/2025 16:07:26] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:27,106 INFO: 127.0.0.1 - - [18/May/2025 16:07:27] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:27,119 INFO: 127.0.0.1 - - [18/May/2025 16:07:27] "[36mGET /static/uploads/503644545_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:27,119 INFO: 127.0.0.1 - - [18/May/2025 16:07:27] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:27,123 INFO: 127.0.0.1 - - [18/May/2025 16:07:27] "[36mGET /static/uploads/503619478_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:27,353 INFO: 127.0.0.1 - - [18/May/2025 16:07:27] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,017 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "GET /preview?id=10 HTTP/1.1" 200 -
+2025-05-18 16:07:29,111 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,112 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,114 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,115 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,350 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,359 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,362 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,374 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,393 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,393 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,395 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:29,725 INFO: 127.0.0.1 - - [18/May/2025 16:07:29] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:07:30,917 INFO: 127.0.0.1 - - [18/May/2025 16:07:30] "GET /checkout/details/order/10/aa792130d446 HTTP/1.1" 200 -
+2025-05-18 16:07:31,001 INFO: 127.0.0.1 - - [18/May/2025 16:07:31] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:31,008 INFO: 127.0.0.1 - - [18/May/2025 16:07:31] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:31,013 INFO: 127.0.0.1 - - [18/May/2025 16:07:31] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:07:31,476 INFO: 127.0.0.1 - - [18/May/2025 16:07:31] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:07:31,518 INFO: 127.0.0.1 - - [18/May/2025 16:07:31] "GET /checkout/step/details/order/10/aa792130d446 HTTP/1.1" 200 -
+2025-05-18 16:07:31,597 INFO: 127.0.0.1 - - [18/May/2025 16:07:31] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:07:49,168 INFO: 127.0.0.1 - - [18/May/2025 16:07:49] "POST /contact_details?order_id=10 HTTP/1.1" 200 -
+2025-05-18 16:07:49,188 INFO: 127.0.0.1 - - [18/May/2025 16:07:49] "GET /checkout/step/delivery/order/10/aa792130d446 HTTP/1.1" 200 -
+2025-05-18 16:07:49,311 INFO: 127.0.0.1 - - [18/May/2025 16:07:49] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:49,312 INFO: 127.0.0.1 - - [18/May/2025 16:07:49] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:49,331 INFO: 127.0.0.1 - - [18/May/2025 16:07:49] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:56,957 INFO: 127.0.0.1 - - [18/May/2025 16:07:56] "POST /delivery?order_id=10 HTTP/1.1" 200 -
+2025-05-18 16:07:56,977 INFO: 127.0.0.1 - - [18/May/2025 16:07:56] "POST /delivery?order_id=10 HTTP/1.1" 200 -
+2025-05-18 16:07:56,999 INFO: 127.0.0.1 - - [18/May/2025 16:07:56] "GET /checkout/step/essentials/order/10/aa792130d446 HTTP/1.1" 200 -
+2025-05-18 16:07:57,053 INFO: 127.0.0.1 - - [18/May/2025 16:07:57] "GET /checkout/step/essentials/order/10/aa792130d446 HTTP/1.1" 200 -
+2025-05-18 16:07:57,098 INFO: 127.0.0.1 - - [18/May/2025 16:07:57] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:57,107 INFO: 127.0.0.1 - - [18/May/2025 16:07:57] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:57,110 INFO: 127.0.0.1 - - [18/May/2025 16:07:57] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 16:07:57,138 INFO: 127.0.0.1 - - [18/May/2025 16:07:57] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 16:08:25,287 INFO: 127.0.0.1 - - [18/May/2025 16:08:25] "POST /essentials?order_id=10 HTTP/1.1" 200 -
+2025-05-18 16:08:25,311 INFO: 127.0.0.1 - - [18/May/2025 16:08:25] "GET /checkout/step/payment/order/10/aa792130d446 HTTP/1.1" 200 -
+2025-05-18 16:10:59,897 INFO: 127.0.0.1 - - [18/May/2025 16:10:59] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 16:11:00,871 INFO: 127.0.0.1 - - [18/May/2025 16:11:00] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:11:00,899 INFO: 127.0.0.1 - - [18/May/2025 16:11:00] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:00,900 INFO: 127.0.0.1 - - [18/May/2025 16:11:00] "[36mGET /static/uploads/503644622_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:01,862 INFO: 127.0.0.1 - - [18/May/2025 16:11:01] "[36mGET /static/uploads/503644567_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:01,865 INFO: 127.0.0.1 - - [18/May/2025 16:11:01] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:01,990 INFO: 127.0.0.1 - - [18/May/2025 16:11:01] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:01,992 INFO: 127.0.0.1 - - [18/May/2025 16:11:01] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:11:02,012 INFO: 127.0.0.1 - - [18/May/2025 16:11:02] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:02,501 INFO: 127.0.0.1 - - [18/May/2025 16:11:02] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:11:03,919 INFO: 127.0.0.1 - - [18/May/2025 16:11:03] "GET /preview?id=10 HTTP/1.1" 200 -
+2025-05-18 16:11:04,016 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,034 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,044 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,047 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,251 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,269 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,269 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,304 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,320 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,321 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,324 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 16:11:04,783 INFO: 127.0.0.1 - - [18/May/2025 16:11:04] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:11:06,483 INFO: 127.0.0.1 - - [18/May/2025 16:11:06] "GET /checkout/details/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:11:06,579 INFO: 127.0.0.1 - - [18/May/2025 16:11:06] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:11:06,612 INFO: 127.0.0.1 - - [18/May/2025 16:11:06] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:11:06,881 INFO: 127.0.0.1 - - [18/May/2025 16:11:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:07,348 INFO: 127.0.0.1 - - [18/May/2025 16:11:07] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:11:07,445 INFO: 127.0.0.1 - - [18/May/2025 16:11:07] "[31m[1mGET /checkout/step/details/order/10/b9154f00abdc HTTP/1.1[0m" 403 -
+2025-05-18 16:11:26,678 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.43.211:3000
+2025-05-18 16:11:26,680 INFO: [33mPress CTRL+C to quit[0m
+2025-05-18 16:11:26,682 INFO:  * Restarting with stat
+2025-05-18 16:11:27,666 WARNING:  * Debugger is active!
+2025-05-18 16:11:27,703 INFO:  * Debugger PIN: 388-349-864
+2025-05-18 16:11:31,342 INFO: 127.0.0.1 - - [18/May/2025 16:11:31] "GET /checkout/details/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:11:31,515 INFO: 127.0.0.1 - - [18/May/2025 16:11:31] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:11:31,524 INFO: 127.0.0.1 - - [18/May/2025 16:11:31] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:31,528 INFO: 127.0.0.1 - - [18/May/2025 16:11:31] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:11:32,130 INFO: 127.0.0.1 - - [18/May/2025 16:11:32] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:11:32,281 INFO: 127.0.0.1 - - [18/May/2025 16:11:32] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:32,317 INFO: 127.0.0.1 - - [18/May/2025 16:11:32] "GET /checkout/step/details/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:11:32,572 INFO: 127.0.0.1 - - [18/May/2025 16:11:32] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:11:48,081 INFO: 127.0.0.1 - - [18/May/2025 16:11:48] "POST /contact_details?order_id=10 HTTP/1.1" 200 -
+2025-05-18 16:11:48,157 INFO: 127.0.0.1 - - [18/May/2025 16:11:48] "GET /checkout/step/delivery/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:11:48,263 INFO: 127.0.0.1 - - [18/May/2025 16:11:48] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:48,266 INFO: 127.0.0.1 - - [18/May/2025 16:11:48] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:48,283 INFO: 127.0.0.1 - - [18/May/2025 16:11:48] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:51,106 INFO: 127.0.0.1 - - [18/May/2025 16:11:51] "POST /delivery?order_id=10 HTTP/1.1" 200 -
+2025-05-18 16:11:51,180 INFO: 127.0.0.1 - - [18/May/2025 16:11:51] "POST /delivery?order_id=10 HTTP/1.1" 200 -
+2025-05-18 16:11:51,211 INFO: 127.0.0.1 - - [18/May/2025 16:11:51] "GET /checkout/step/essentials/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:11:51,308 INFO: 127.0.0.1 - - [18/May/2025 16:11:51] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:51,323 INFO: 127.0.0.1 - - [18/May/2025 16:11:51] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:51,329 INFO: 127.0.0.1 - - [18/May/2025 16:11:51] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:51,332 INFO: 127.0.0.1 - - [18/May/2025 16:11:51] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 16:11:51,359 INFO: 127.0.0.1 - - [18/May/2025 16:11:51] "GET /checkout/step/essentials/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:11:52,964 INFO: 127.0.0.1 - - [18/May/2025 16:11:52] "POST /essentials?order_id=10 HTTP/1.1" 200 -
+2025-05-18 16:11:53,009 INFO: 127.0.0.1 - - [18/May/2025 16:11:53] "GET /checkout/step/payment/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:13:15,744 INFO: 127.0.0.1 - - [18/May/2025 16:13:15] "GET /checkout/payment/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:13:16,943 INFO: 127.0.0.1 - - [18/May/2025 16:13:16] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:16,949 INFO: 127.0.0.1 - - [18/May/2025 16:13:16] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:16,953 INFO: 127.0.0.1 - - [18/May/2025 16:13:16] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:17,935 INFO: 127.0.0.1 - - [18/May/2025 16:13:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:18,071 INFO: 127.0.0.1 - - [18/May/2025 16:13:18] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:13:18,215 INFO: 127.0.0.1 - - [18/May/2025 16:13:18] "GET /checkout/step/payment/order/10/b9154f00abdc HTTP/1.1" 200 -
+2025-05-18 16:13:18,316 INFO: 127.0.0.1 - - [18/May/2025 16:13:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:18,530 INFO: 127.0.0.1 - - [18/May/2025 16:13:18] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:24,279 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 16:13:24,398 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:24,401 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "[36mGET /static/uploads/503644614_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:24,408 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:24,695 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "[36mGET /static/uploads/503644538_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:24,697 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:24,709 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:24,715 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:24,731 INFO: 127.0.0.1 - - [18/May/2025 16:13:24] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:25,129 INFO: 127.0.0.1 - - [18/May/2025 16:13:25] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:13:26,880 INFO: 127.0.0.1 - - [18/May/2025 16:13:26] "GET /preview?id=10 HTTP/1.1" 200 -
+2025-05-18 16:13:26,970 INFO: 127.0.0.1 - - [18/May/2025 16:13:26] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:26,973 INFO: 127.0.0.1 - - [18/May/2025 16:13:26] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:26,975 INFO: 127.0.0.1 - - [18/May/2025 16:13:26] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:26,979 INFO: 127.0.0.1 - - [18/May/2025 16:13:26] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:27,177 INFO: 127.0.0.1 - - [18/May/2025 16:13:27] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:27,281 INFO: 127.0.0.1 - - [18/May/2025 16:13:27] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:27,284 INFO: 127.0.0.1 - - [18/May/2025 16:13:27] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:27,297 INFO: 127.0.0.1 - - [18/May/2025 16:13:27] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:27,299 INFO: 127.0.0.1 - - [18/May/2025 16:13:27] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:27,302 INFO: 127.0.0.1 - - [18/May/2025 16:13:27] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 16:13:27,305 INFO: 127.0.0.1 - - [18/May/2025 16:13:27] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:27,572 INFO: 127.0.0.1 - - [18/May/2025 16:13:27] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:13:28,579 INFO: 127.0.0.1 - - [18/May/2025 16:13:28] "GET /checkout/details/order/10/51820efa5763 HTTP/1.1" 200 -
+2025-05-18 16:13:28,699 INFO: 127.0.0.1 - - [18/May/2025 16:13:28] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:28,708 INFO: 127.0.0.1 - - [18/May/2025 16:13:28] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:28,711 INFO: 127.0.0.1 - - [18/May/2025 16:13:28] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:29,162 INFO: 127.0.0.1 - - [18/May/2025 16:13:29] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:13:29,220 INFO: 127.0.0.1 - - [18/May/2025 16:13:29] "[31m[1mGET /checkout/step/details/order/10/51820efa5763 HTTP/1.1[0m" 403 -
+2025-05-18 16:13:40,084 INFO: 127.0.0.1 - - [18/May/2025 16:13:40] "[33mGET /checkout/details/payment/10/51820efa5763 HTTP/1.1[0m" 404 -
+2025-05-18 16:13:45,449 INFO: 127.0.0.1 - - [18/May/2025 16:13:45] "[33mGET /checkout/details/payments/10/51820efa5763 HTTP/1.1[0m" 404 -
+2025-05-18 16:13:48,503 INFO: 127.0.0.1 - - [18/May/2025 16:13:48] "[33mGET /checkout/ HTTP/1.1[0m" 404 -
+2025-05-18 16:13:52,060 INFO: 127.0.0.1 - - [18/May/2025 16:13:52] "GET / HTTP/1.1" 200 -
+2025-05-18 16:13:54,102 INFO: 127.0.0.1 - - [18/May/2025 16:13:54] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:54,268 INFO: 127.0.0.1 - - [18/May/2025 16:13:54] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:54,269 INFO: 127.0.0.1 - - [18/May/2025 16:13:54] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:54,808 INFO: 127.0.0.1 - - [18/May/2025 16:13:54] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:13:57,868 INFO: 127.0.0.1 - - [18/May/2025 16:13:57] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 16:13:58,047 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:58,059 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:13:58,062 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/uploads/503644620_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:58,065 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:58,319 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/uploads/503644538_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:58,322 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:58,361 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:13:58,365 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:13:58,806 INFO: 127.0.0.1 - - [18/May/2025 16:13:58] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,277 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "GET /preview?id=10 HTTP/1.1" 200 -
+2025-05-18 16:14:01,462 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,472 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,477 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,477 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,749 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,752 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,756 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,759 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,760 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,776 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 16:14:01,780 INFO: 127.0.0.1 - - [18/May/2025 16:14:01] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:02,269 INFO: 127.0.0.1 - - [18/May/2025 16:14:02] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:14:04,127 INFO: 127.0.0.1 - - [18/May/2025 16:14:04] "GET /checkout/details/order/10/6f618c92bf69 HTTP/1.1" 200 -
+2025-05-18 16:14:04,268 INFO: 127.0.0.1 - - [18/May/2025 16:14:04] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:04,268 INFO: 127.0.0.1 - - [18/May/2025 16:14:04] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:04,270 INFO: 127.0.0.1 - - [18/May/2025 16:14:04] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:04,740 INFO: 127.0.0.1 - - [18/May/2025 16:14:04] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:14:04,811 INFO: 127.0.0.1 - - [18/May/2025 16:14:04] "[31m[1mGET /checkout/step/details/order/10/6f618c92bf69 HTTP/1.1[0m" 403 -
+2025-05-18 16:14:05,980 INFO: 127.0.0.1 - - [18/May/2025 16:14:05] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 16:14:06,227 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:06,234 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:06,245 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/uploads/503644622_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:06,247 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/uploads/503644561_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:06,342 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/uploads/503644567_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:06,343 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/uploads/503644545_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:06,396 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/uploads/503644571_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:06,409 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:06,600 INFO: 127.0.0.1 - - [18/May/2025 16:14:06] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:14:07,707 INFO: 127.0.0.1 - - [18/May/2025 16:14:07] "GET /preview?id=9 HTTP/1.1" 200 -
+2025-05-18 16:14:07,840 INFO: 127.0.0.1 - - [18/May/2025 16:14:07] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:07,847 INFO: 127.0.0.1 - - [18/May/2025 16:14:07] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:07,857 INFO: 127.0.0.1 - - [18/May/2025 16:14:07] "[36mGET /static/uploads/503644567_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:07,863 INFO: 127.0.0.1 - - [18/May/2025 16:14:07] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,057 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/uploads/503644538_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,061 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/uploads/503644540_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,079 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,081 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/uploads/503644542_hd_3.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,091 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/uploads/503644545_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,102 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,107 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,111 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/uploads/502916169_large.jpeg HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,113 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/uploads/503447141_large.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:08,499 INFO: 127.0.0.1 - - [18/May/2025 16:14:08] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:14:09,851 INFO: 127.0.0.1 - - [18/May/2025 16:14:09] "GET /checkout/details/order/9/67af22fcbfbd HTTP/1.1" 200 -
+2025-05-18 16:14:10,183 INFO: 127.0.0.1 - - [18/May/2025 16:14:10] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:10,198 INFO: 127.0.0.1 - - [18/May/2025 16:14:10] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:14:10,202 INFO: 127.0.0.1 - - [18/May/2025 16:14:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:10,415 INFO: 127.0.0.1 - - [18/May/2025 16:14:10] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:14:10,499 INFO: 127.0.0.1 - - [18/May/2025 16:14:10] "GET /checkout/step/details/order/9/67af22fcbfbd HTTP/1.1" 200 -
+2025-05-18 16:14:10,562 INFO: 127.0.0.1 - - [18/May/2025 16:14:10] "[36mGET /static/uploads/503644565_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:14:27,833 INFO: 127.0.0.1 - - [18/May/2025 16:14:27] "POST /contact_details?order_id=9 HTTP/1.1" 200 -
+2025-05-18 16:14:28,046 INFO: 127.0.0.1 - - [18/May/2025 16:14:28] "GET /checkout/step/delivery/order/9/67af22fcbfbd HTTP/1.1" 200 -
+2025-05-18 16:14:28,511 INFO: 127.0.0.1 - - [18/May/2025 16:14:28] "[36mGET /static/option2.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:28,513 INFO: 127.0.0.1 - - [18/May/2025 16:14:28] "[36mGET /static/option1.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:28,519 INFO: 127.0.0.1 - - [18/May/2025 16:14:28] "[36mGET /static/option3.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:31,648 INFO: 127.0.0.1 - - [18/May/2025 16:14:31] "POST /delivery?order_id=9 HTTP/1.1" 200 -
+2025-05-18 16:14:31,653 INFO: 127.0.0.1 - - [18/May/2025 16:14:31] "POST /delivery?order_id=9 HTTP/1.1" 200 -
+2025-05-18 16:14:31,723 INFO: 127.0.0.1 - - [18/May/2025 16:14:31] "GET /checkout/step/essentials/order/9/67af22fcbfbd HTTP/1.1" 200 -
+2025-05-18 16:14:31,829 INFO: 127.0.0.1 - - [18/May/2025 16:14:31] "GET /checkout/step/essentials/order/9/67af22fcbfbd HTTP/1.1" 200 -
+2025-05-18 16:14:31,842 INFO: 127.0.0.1 - - [18/May/2025 16:14:31] "[36mGET /static/fetch.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:31,847 INFO: 127.0.0.1 - - [18/May/2025 16:14:31] "[36mGET /static/healtcheck.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:31,860 INFO: 127.0.0.1 - - [18/May/2025 16:14:31] "[36mGET /static/starterkit.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:31,862 INFO: 127.0.0.1 - - [18/May/2025 16:14:31] "[36mGET /static/akc.png HTTP/1.1[0m" 304 -
+2025-05-18 16:14:36,852 INFO: 127.0.0.1 - - [18/May/2025 16:14:36] "POST /essentials?order_id=9 HTTP/1.1" 200 -
+2025-05-18 16:14:36,872 INFO: 127.0.0.1 - - [18/May/2025 16:14:36] "GET /checkout/step/payment/order/9/67af22fcbfbd HTTP/1.1" 200 -
+2025-05-18 16:28:59,469 INFO: 127.0.0.1 - - [18/May/2025 16:28:59] "GET /available_puppies HTTP/1.1" 200 -
+2025-05-18 16:28:59,795 INFO: 127.0.0.1 - - [18/May/2025 16:28:59] "[36mGET /static/uploads/503644614_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:28:59,795 INFO: 127.0.0.1 - - [18/May/2025 16:28:59] "[36mGET /static/js/tailwin.js HTTP/1.1[0m" 304 -
+2025-05-18 16:28:59,798 INFO: 127.0.0.1 - - [18/May/2025 16:28:59] "[36mGET /static/uploads/503644559_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:29:00,982 INFO: 127.0.0.1 - - [18/May/2025 16:29:00] "[36mGET /static/uploads/503644538_hd.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:29:00,989 INFO: 127.0.0.1 - - [18/May/2025 16:29:00] "[36mGET /static/uploads/503644573_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:29:01,141 INFO: 127.0.0.1 - - [18/May/2025 16:29:01] "[36mGET /static/uploads/503644569_hd_1.JPG HTTP/1.1[0m" 304 -
+2025-05-18 16:29:01,153 INFO: 127.0.0.1 - - [18/May/2025 16:29:01] "[36mGET /static/js/checkout_steps.js HTTP/1.1[0m" 304 -
+2025-05-18 16:29:01,206 INFO: 127.0.0.1 - - [18/May/2025 16:29:01] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-05-18 16:29:01,786 INFO: 127.0.0.1 - - [18/May/2025 16:29:01] "[36mGET /static/footer.svg HTTP/1.1[0m" 304 -
+2025-05-18 16:30:17,083 INFO: 127.0.0.1 - - [18/May/2025 16:30:17] "[32mGET /admin/dashboard HTTP/1.1[0m" 302 -
+2025-05-18 16:30:17,215 INFO: 127.0.0.1 - - [18/May/2025 16:30:17] "GET /admin/login?next=http://127.0.0.1:3000/admin/dashboard HTTP/1.1" 200 -
+2025-05-18 16:30:23,419 INFO: 127.0.0.1 - - [18/May/2025 16:30:23] "[32mPOST /admin/login?next=http://127.0.0.1:3000/admin/dashboard HTTP/1.1[0m" 302 -
+2025-05-18 16:30:23,452 INFO: 127.0.0.1 - - [18/May/2025 16:30:23] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-05-18 16:32:51,720 INFO: 127.0.0.1 - - [18/May/2025 16:32:51] "GET /admin/orders HTTP/1.1" 200 -
+2025-05-18 16:33:00,908 INFO: 127.0.0.1 - - [18/May/2025 16:33:00] "GET /admin/reviews HTTP/1.1" 200 -
+2025-05-18 16:33:02,352 INFO: 127.0.0.1 - - [18/May/2025 16:33:02] "GET /admin/show_reviews HTTP/1.1" 200 -
+2025-05-18 16:33:02,457 INFO: 127.0.0.1 - - [18/May/2025 16:33:02] "[36mGET /static/uploads/image1746642340926.png HTTP/1.1[0m" 304 -
+2025-05-18 16:33:02,458 INFO: 127.0.0.1 - - [18/May/2025 16:33:02] "[36mGET /static/uploads/image1746642256733.png HTTP/1.1[0m" 304 -
+2025-05-18 16:33:07,914 INFO: 127.0.0.1 - - [18/May/2025 16:33:07] "GET /admin/puppies HTTP/1.1" 200 -
+2025-05-18 16:33:08,583 INFO: 127.0.0.1 - - [18/May/2025 16:33:08] "GET /admin/get_puppies HTTP/1.1" 200 -
+2025-05-18 16:33:10,616 INFO: 127.0.0.1 - - [18/May/2025 16:33:10] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-05-18 16:39:39,888 INFO:  * Detected change in '/Users/macbookair/Desktop/puppy/app.py', reloading
+2025-05-18 16:39:40,609 INFO:  * Restarting with stat
+2025-05-18 16:39:42,672 WARNING:  * Debugger is active!
+2025-05-18 16:39:42,789 INFO:  * Debugger PIN: 388-349-864

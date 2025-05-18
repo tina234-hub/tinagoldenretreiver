@@ -1,0 +1,128 @@
+
+
+<div class="max-w-screen-xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
+    {% set image_list = puppy.images.split(',')%}
+    <!-- Left Side -->
+    <div class="md:col-span-2">
+      <h2 class="text-xl font-bold text-green-700 mb-1">Delivery</h2>
+      <p class="text-sm text-gray-600 mb-6">
+        Our team and delivery partners prioritize your puppy's well-being, ensuring safe and swift delivery.
+      </p>
+
+      <!-- Alert -->
+      <div class="bg-green-100 border border-green-200 p-4 rounded-md text-sm mb-6">
+        <strong>Paws up! </strong> {{puppy.name}} is still growing and doesn’t quite meet the USDA’s safety standards for delivery just yet. 
+        Puppies need to be 8 weeks old to leave their moms. No worries, our team will help organize delivery so {{puppy.name}} is safe.
+      </div>
+  
+      <hr class="border-green-600 mb-6">
+  
+      <h3 class="text-lg font-bold mb-1">How do you want to bring {{puppy.name}} home?</h3>
+      <p class="text-sm text-gray-600 mb-4">3 available delivery programs for {{puppy.name}}’s transportation.</p>
+  
+      <!-- Delivery Cards -->
+      <div id="delivery-options" class="space-y-6">
+  
+        <!-- Option 1 -->
+        <div onclick="selectOption(this)" class="option border rounded-xl overflow-hidden transition-all cursor-pointer">
+          <div class="grid md:grid-cols-2">
+            <img src="{{ url_for('static', filename='option1.png') }}" class="w-full h-full object-cover" />
+            <div class="p-4">
+              <h4 class="font-semibold text-lg">Delivery near your home</h4>
+              <ul class="list-disc pl-5 mt-2 text-sm text-gray-700 space-y-1">
+                <li>White glove delivery to a meeting place typically within 20 min – 2 hrs of your home</li>
+                <li>Temperature-controlled, puppy-safe van with two drivers</li>
+                <li>Timing: 2 to 4 weeks depending on vet clearance</li>
+              </ul>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm font-semibold">$30.00 <span class="text-gray-500 font-normal">Includes health certificate</span></div>
+                <button class="select-btn px-6 py-2 border rounded-full font-semibold">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Option 2 -->
+        <div onclick="selectOption(this)" class="option border rounded-xl overflow-hidden transition-all cursor-pointer">
+          <div class="grid md:grid-cols-2">
+            <div class="relative">
+              <img src="{{ url_for('static', filename='option2.png') }}" class="w-full h-full object-cover" />
+              <span class="absolute top-2 left-2 bg-blue-700 text-white text-xs px-3 py-1 rounded-full shadow">
+                1860 mi from your address (~37h 12m drive)
+              </span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold text-lg">Pickup near the breeder</h4>
+              <ul class="list-disc pl-5 mt-2 text-sm text-gray-700 space-y-1">
+                <li>Pickup puppy at breeder’s location or meeting point</li>
+                <li>Coordinate ideal date/time with PuppySpot team</li>
+                <li>Timing: 1 to 2 weeks depending on clearance</li>
+              </ul>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm font-semibold">FREE <span class="text-gray-500 font-normal">Includes health certificate</span></div>
+                <button  class="select-btn px-6 py-2 border rounded-full font-semibold">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Option 3 -->
+        <div onclick="selectOption(this)" class="option border rounded-xl overflow-hidden transition-all cursor-pointer">
+          <div class="grid md:grid-cols-2">
+            <img src="{{ url_for('static', filename='option3.png') }}" class="w-full h-full object-cover" />
+            <div class="p-4">
+              <h4 class="font-semibold text-lg">Door-to-door delivery</h4>
+              <ul class="list-disc pl-5 mt-2 text-sm text-gray-700 space-y-1">
+                <li>White glove delivery directly to your home</li>
+                <li>Same safety measures and van setup</li>
+                <li>Timing: 2 to 4 weeks depending on clearance</li>
+              </ul>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-sm font-semibold">$40.00 <span class="text-gray-500 font-normal">Includes health certificate</span></div>
+                <button class="select-btn px-6 py-2 border rounded-full font-semibold">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Note -->
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-6 text-sm">
+         <strong><svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.3" cx="17" cy="17" r="17" fill="#FFC700"></circle><g clip-path="url(#clip0_2782_27380)"><path d="M17.0007 21.1654C19.3018 21.1654 21.1673 19.2999 21.1673 16.9987C21.1673 14.6975 19.3018 12.832 17.0007 12.832C14.6995 12.832 12.834 14.6975 12.834 16.9987C12.834 19.2999 14.6995 21.1654 17.0007 21.1654Z" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17 7.83203V9.4987" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17 24.5V26.1667" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.5176 10.5156L11.7009 11.699" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22.3008 22.3008L23.4841 23.4841" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.83398 17H9.50065" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24.5 17H26.1667" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.5176 23.4841L11.7009 22.3008" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22.3008 11.699L23.4841 10.5156" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_2782_27380"><rect width="22" height="22" fill="white" transform="translate(6 6)"></rect></clipPath></defs></svg>
+            Please note:</strong> Delivery may be delayed due to weather or external factors. We will notify you if changes occur.
+      </div>
+  
+      <!-- Continue -->
+      <div class="mt-8 text-center">
+        <button  id ="delivery_btn" onclick="submitDelivery()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full">
+          Continue to essentials
+        </button>
+      </div>
+    </div>
+  
+    <!-- Right Summary -->
+    <div class="sticky top-20 bg-white rounded-xl shadow p-6">
+      <h3 class="font-semibold text-lg mb-4">Summary</h3>
+      <div class="flex items-center gap-4 mb-4">
+        <img src="{{ url_for('static', filename='uploads/'~image_list[0]) }}" alt="{{puppy.name}}" class="w-16 h-16 rounded object-cover">
+        <div>
+          <p class="font-bold">{{puppy.name}}</p>
+          <p class="text-sm text-gray-500">{{puppy.gender}} • {{puppy.age}} weeks<br>Godlen Retriever</p>
+          <p class="text-xs text-gray-400">ID #{{puppy.id}}</p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between"><span>{{puppy.name}}</span><span id="puppyprice">${{puppy.price}}</span></div>
+        <div class="flex justify-between"><span>Delivery</span><span id="delivery-cost">$60.00</span></div>
+        <p class="text-xs text-gray-400">Delivery near your home, Health Certificate</p>
+      </div>
+      <hr class="my-4">
+      <div class="flex justify-between font-bold text-lg">
+        <span>Total</span><span id="total-cost"></span>
+      </div>
+    </div>
+  </div>
+  
+  
+

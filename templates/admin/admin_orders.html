@@ -1,0 +1,214 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Puppies - Admin Panel{% endblock %}
+
+{% block heading %}Manage Orders{% endblock %}
+
+{% block content %}
+<div class="max-w-screen-xl mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-6">All Orders</h2>
+
+    <!-- Orders Table -->
+    <div id="ordersTable" class="overflow-x-auto">
+      <table id="orders" class="w-full table-auto text-left text-sm text-gray-400">
+        <thead class="bg-[#2e2e2e]">
+          <tr>
+            <th class="p-3"><input type="checkbox" id="selectAll"></th>
+            <th class="p-3">Order ID</th>
+            <th class="p-3">Tracking Number</th>
+            <th class="p-3">Puppy</th>
+            <th class="p-3">Customer</th>
+            <th class="p-3">Status</th>
+            <th class="p-3">Action</th>
+          </tr>
+        </thead>
+        <tbody id="orderRows">
+          {% for order in orders %}
+            <tr>
+              <td class="p-3"><input type="checkbox" class="selectRow" value="{{ order.id }}"></td>
+              <td class="p-3">{{ order.id }}</td>
+              <td class="p-3">
+                {% if order.tracking_number %}
+                  {{ order.tracking_number }}
+                {% else %}
+                  <button onclick="generateTrackingNumber('{{ order.id }}')" class="bg-green-600 text-white px-4 py-1 rounded text-xs">Generate Tracking Number</button>
+                {% endif %}
+              </td>
+              <td class="p-3">{{ order.puppy_name }}</td>
+              <td class="p-3">{{ order.customer_email }}</td>
+              <td class="p-3">
+                {% set status_map = ['Order Received', 'Scheduled', 'Out for Delivery', 'Delivered'] %}
+                {% set status_classes = ['bg-gray-500', 'bg-yellow-500', 'bg-blue-500', 'bg-green-600'] %}
+                <span id="status-{{ order.id }}" class="px-3 py-1 rounded-full text-white text-xs font-medium {{ status_classes[order.status - 1] }}">
+                  {{ status_map[order.status - 1] }}
+                </span>
+              </td>
+              <td class="p-3">
+                <button onclick="openStatusModal('{{ order.id }}')" class="bg-blue-600 text-white px-4 py-1 rounded text-xs">Update Status</button>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+</div>
+  
+<!-- Modal for Status Update -->
+<div id="statusModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center hidden">
+  <div class="bg-[#1b1b1b] p-6 rounded-lg shadow-md mb-8">
+    <h3 class="text-xl font-semibold mb-4">Update Order Status</h3>
+    <form id="statusForm" class="space-y-4">
+      <input type="hidden" name="order_id" id="modalOrderId" />
+      <label class="block text-sm font-medium mb-2">Select Status</label>
+      <select name="status" class="w-full p-2 border border-gray-700 bg-[#232323] text-white rounded" required>
+        <option value="1">Order Received</option>
+        <option value="2">Scheduled</option>
+        <option value="3">Out for Delivery</option>
+        <option value="4">Delivered</option>
+      </select>
+      <div class="flex justify-end gap-2">
+        <button type="button" onclick="closeStatusModal()" class="px-4 py-2 text-sm border rounded">Cancel</button>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded text-sm">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Include DataTables CSS and JS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+<script>
+  function openStatusModal(orderId) {
+    const modalOrderIdInput = document.getElementById('modalOrderId');
+    if (modalOrderIdInput) {
+      modalOrderIdInput.value = orderId;
+      document.getElementById('statusModal').style.display = 'flex';
+    }
+  }
+
+  function closeStatusModal() {
+    document.getElementById('statusModal').style.display = 'none';
+  }
+
+  function generateTrackingNumber(orderId) {
+    fetch('/admin/generate_tracking', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ order_id: orderId })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        const trackingCell = document.querySelector(`tr td:nth-child(3) button[onclick*="generateTrackingNumber('${orderId}')"]`)?.parentElement;
+        if (trackingCell) {
+          trackingCell.textContent = data.tracking_number;
+          alert('Tracking number generated: ' + data.tracking_number);
+        }
+      } else {
+        alert('Error generating tracking number: ' + data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error generating tracking number:', error);
+      alert('Error generating tracking number: ' + error.message);
+    });
+  }
+
+  document.getElementById('statusForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const orderId = formData.get('order_id');
+    const status = formData.get('status');
+
+    fetch('/admin/update_status', {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        const badge = document.getElementById(`status-${orderId}`);
+        if (badge) {
+          const statusText = ['Order Received', 'Scheduled', 'Out for Delivery', 'Delivered'];
+          const statusClass = ['bg-gray-500', 'bg-yellow-500', 'bg-blue-500', 'bg-green-600'];
+          badge.textContent = statusText[status - 1];
+          badge.className = `px-3 py-1 rounded-full text-white text-xs font-medium ${statusClass[status - 1]}`;
+        }
+        closeStatusModal();
+      } else {
+        alert('Error updating status: ' + data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error updating status:', error);
+      alert('Error updating status: ' + error.message);
+    });
+  });
+
+  $(document).ready(function () {
+    const table = $('#orders').DataTable({
+      pageLength: 5,
+      lengthMenu: [5, 10, 25],
+      searching: true,
+      language: {
+        search: "_INPUT_",
+        searchPlaceholder: "Search orders..."
+      }
+    });
+
+    // Add Delete Selected button
+    $('#orders_length').after(`
+      <div id="deleteSelectedWrapper" class="ml-4 hidden">
+        <button id="deleteSelectedBtn" class="bg-red-600 text-white px-4 py-2 rounded text-sm">
+          Delete Selected
+        </button>
+      </div>
+    `);
+
+    // Select all
+    $('#selectAll').on('change', function () {
+      $('.selectRow').prop('checked', this.checked).trigger('change');
+    });
+
+    // Toggle Delete button
+    $('#orders').on('change', '.selectRow', function () {
+      const selected = $('.selectRow:checked').length;
+      $('#deleteSelectedWrapper').toggleClass('hidden', selected === 0);
+    });
+
+    // Delete selected
+    $(document).on('click', '#deleteSelectedBtn', function () {
+      const selectedIds = $('.selectRow:checked').map(function () {
+        return this.value;
+      }).get();
+
+      if (selectedIds.length === 0) return;
+
+      if (!confirm(`Are you sure you want to delete ${selectedIds.length} selected order(s)?`)) return;
+
+      fetch('/admin/delete_orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ order_ids: selectedIds })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          selectedIds.forEach(id => {
+            $(`.selectRow[value="${id}"]`).closest('tr').remove();
+          });
+          $('#deleteSelectedWrapper').addClass('hidden');
+        } else {
+          alert('Error deleting: ' + data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Delete error:', error);
+        alert('Error deleting orders.');
+      });
+    });
+  });
+</script>
+{% endblock %}

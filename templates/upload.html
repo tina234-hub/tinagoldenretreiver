@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload SQLite Database</title>
+  <style>
+    body {
+      background-color: #232323;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #2e2e2e;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    input[type="file"] {
+      display: block;
+      margin: 1rem 0;
+    }
+    button {
+      padding: 0.5rem 1.5rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #status {
+      margin-top: 1rem;
+      color: #ccc;
+      white-space: pre-line;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Upload SQLite Database File</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" name="dbfile" required>
+      <button type="submit">Upload and Transfer</button>
+    </form>
+    <div id="status"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='progress.js') }}"></script>
+</body>
+</html>

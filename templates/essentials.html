@@ -1,0 +1,130 @@
+
+<div class="max-w-screen-xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
+    <!-- Left Side -->
+    {% set image_list = puppy.images.split(',')%}
+    <div class="md:col-span-2">
+      <h2 class="text-xl font-bold text-green-700 mb-1">Essentials & puppy care</h2>
+      <p class="text-sm text-gray-600 mb-6">
+        {{puppy.name}}’s well-being is our top priority. We offer exclusive supplies and services to ensure your puppy feels right at home with you on this exciting journey!
+      </p>
+      <hr class="border-green-600 mb-6">
+  
+      <!-- Puppy care -->
+      <h3 class="flex items-center gap-2 text-lg font-bold mb-4">
+        <span class="text-green-600"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" rx="25" fill="#F1FAF5"></rect><path d="M25 33L22.4513 35.2318L14.6713 27.4518L13.6113 26.3918C12.5796 25.3601 12 23.9609 12 22.5018C12 21.0428 12.5796 19.6435 13.6113 18.6118C14.643 17.5801 16.0423 17.0005 17.5013 17.0005C18.9603 17.0005 20.3596 17.5801 21.3913 18.6118L22.4513 19.6718L23.5113 18.6118C24.022 18.1008 24.6285 17.6955 25.2959 17.4189C25.9634 17.1423 26.6788 17 27.4013 17C28.1238 17 28.8392 17.1423 29.5066 17.4189C30.1741 17.6955 30.7805 18.1008 31.2913 18.6118C31.8023 19.1226 32.2076 19.729 32.4842 20.3965C32.7608 21.0639 32.9031 21.7793 32.9031 22.5018" stroke="#219653" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M28.642 29.7258L28.6422 29.7257C29.7441 28.746 31.4087 28.7459 32.5129 29.7235C32.6183 29.818 32.7234 29.9163 32.8241 30.017C33.4883 30.6811 33.9953 31.4483 34.2942 32.2334L34.2943 32.2338C34.8205 33.6021 34.6631 34.8549 33.9165 35.6016C33.6039 35.9136 33.2147 36.0254 32.8008 36.0274C32.3845 36.0294 31.9493 35.92 31.5563 35.795L31.5562 35.7949C30.9153 35.5923 30.2393 35.5923 29.5978 35.7949C29.2072 35.918 28.7764 36.0275 28.3634 36.0275C27.9482 36.0275 27.5554 35.9162 27.2409 35.6017L27.2408 35.6016C26.4922 34.855 26.3367 33.6037 26.863 32.2337L26.8631 32.2334C27.162 31.4476 27.669 30.6819 28.3331 30.0177C28.433 29.9178 28.536 29.8196 28.642 29.7258Z" fill="#219653" stroke="#219653" stroke-width="0.2"></path><path d="M28.9938 28.6629L28.9704 28.5657C28.8746 28.5889 28.7814 28.6003 28.6874 28.6003C27.9099 28.6003 27.1032 27.8491 26.8354 26.7359L26.8354 26.7358C26.6859 26.117 26.736 25.5148 26.9329 25.0432C27.1298 24.5715 27.4697 24.2373 27.8988 24.1332C28.3287 24.03 28.7839 24.1721 29.1745 24.5018C29.565 24.8314 29.8844 25.3442 30.0338 25.9631C30.1833 26.5819 30.1332 27.1841 29.9363 27.6557C29.7393 28.1275 29.3994 28.4616 28.9703 28.5658L28.9938 28.6629ZM28.9938 28.6629C28.8908 28.6878 28.7898 28.7003 28.6874 28.7003C27.8462 28.7003 27.0121 27.8979 26.7382 26.7593L28.9938 28.6629Z" fill="#219653" stroke="#219653" stroke-width="0.2"></path><path d="M26.6174 28.9372L26.6175 28.9372C26.8448 29.4737 26.8887 30.0252 26.7804 30.4802C26.672 30.9353 26.414 31.2864 26.042 31.443L26.0417 31.4431C25.9019 31.5026 25.7548 31.5306 25.6042 31.5306C24.9468 31.5306 24.2126 30.9883 23.8424 30.1114L23.8424 30.1113C23.6154 29.5745 23.5716 29.0233 23.68 28.5686C23.7884 28.1138 24.0463 27.7627 24.418 27.6055L24.418 27.6055C24.7898 27.4482 25.2215 27.5076 25.6234 27.7465C26.0253 27.9853 26.3904 28.4004 26.6174 28.9372Z" fill="#219653" stroke="#219653" stroke-width="0.2"></path><path d="M32.1948 28.5652L32.1947 28.5652C31.7656 28.4611 31.4257 28.1269 31.229 27.6551C31.0324 27.1835 30.9828 26.5812 31.1332 25.962L31.1332 25.9619C31.2757 25.3738 31.5747 24.8598 31.969 24.5177L31.969 24.5177C32.38 24.1608 32.8404 24.0317 33.2684 24.134C33.6959 24.237 34.0459 24.5635 34.2489 25.0692C34.4415 25.556 34.4735 26.1474 34.3311 26.7373C34.1886 27.3255 33.8896 27.8394 33.4953 28.1815L33.4952 28.1816C33.1758 28.4593 32.8241 28.5997 32.4845 28.5997C32.3865 28.5997 32.2893 28.5882 32.1948 28.5652Z" fill="#219653" stroke="#219653" stroke-width="0.2"></path><path d="M36.7869 27.6072L36.7869 27.6072C37.1587 27.7644 37.4165 28.1155 37.5251 28.5706C37.6336 29.0255 37.5902 29.577 37.3639 30.1145C37.1474 30.6259 36.8024 31.0429 36.3956 31.294L36.3954 31.2942C36.1315 31.4581 35.8624 31.5378 35.6091 31.5378C35.4539 31.5378 35.3047 31.5085 35.1634 31.4483C34.7934 31.2897 34.5239 30.943 34.416 30.4562L34.4159 30.4559C34.3111 29.9888 34.3709 29.4526 34.5875 28.941C34.804 28.4296 35.149 28.0126 35.5558 27.7614L35.5559 27.7614C35.9803 27.4988 36.4172 27.4508 36.7869 27.6072Z" fill="#219653" stroke="#219653" stroke-width="0.2"></path></svg></span> Puppy care
+      </h3>
+      <div class="grid gap-6 mb-10">
+        <div class="flex gap-4 items-center bg-white p-4 rounded-lg shadow">
+          <img src="{{ url_for('static', filename='healtcheck.png') }}" class="w-32 h-24 object-cover rounded" />
+          <div>
+            <h4 class="font-semibold">Nose-to-tail health check</h4>
+            <p class="text-sm text-gray-600 mb-2">Your puppy will receive a thorough health check and up-to-date vaccinations.</p>
+            <span class="text-green-800 bg-green-100 px-3 py-1 rounded-full text-sm font-medium inline-block">Included</span>
+            <span class="text-sm text-gray-400 ml-2">No action required</span>
+          </div>
+        </div>
+  
+        <div class="flex gap-4 items-center bg-white p-4 rounded-lg shadow">
+          <img src="{{ url_for('static', filename='fetch.png') }}" class="w-32 h-24 object-contain rounded bg-gray-50" />
+          <div>
+            <h4 class="font-semibold">Fetch pet insurance quote</h4>
+            <p class="text-sm text-gray-600 mb-2">Eligible for lifetime discount on your full policy. Offer shown after checkout.</p>
+            <span class="text-green-800 bg-green-100 px-3 py-1 rounded-full text-sm font-medium inline-block">Included</span>
+            <span class="text-sm text-gray-400 ml-2">No action required</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Essential supplies -->
+      <h3 class="flex items-center gap-2 text-lg font-bold mb-4">
+        <span class="text-green-600"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" rx="25" fill="#F1FAF5"></rect><path d="M37 24.5C37 31.4036 31.4036 37 24.5 37M37 24.5C37 17.5964 31.4036 12 24.5 12M37 24.5C37 24.5 31.3841 25.9493 27.2174 21.7826C23.0507 17.6159 24.5 12 24.5 12M24.5 37C17.5964 37 12 31.4036 12 24.5M24.5 37C24.5 37 26.2965 32.4257 21.7826 27.2174C17.2687 22.0091 12 24.5 12 24.5M12 24.5C12 17.5964 17.5964 12 24.5 12" stroke="#219653" stroke-width="2"></path></svg></span> Essential supplies
+      </h3>
+      <div class="bg-white p-4 rounded-lg shadow mb-10 flex flex-col md:flex-row gap-4 items-center">
+        <img src="{{ url_for('static', filename='starterkit.png') }}" class="w-48 rounded object-contain" />
+        <div class="flex-1">
+          <h4 class="font-semibold">Starter Kit</h4>
+          <p class="text-sm text-gray-600 mb-2">$95.00</p>
+          <p class="text-sm text-gray-600 mb-2">Includes a cozy bed, blanket, bowls, leash, waste bag dispenser, toys, and more!</p>
+          <div class="flex gap-4">
+            <button id='start_1' onclick="toggleEssential(this, 'Starter Kit', 95)" class="starter-btn bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">✓ Added</button>
+            <button id='start_1' onclick="toggleEssential(this, 'Starter Kit', 95)" class="starter-btn-add text-blue-600 underline text-sm hidden">+ Add</button>
+          </div>
+          
+        </div>
+      </div>
+  
+      <!-- Essential Services -->
+      <h3 class="text-md font-bold mb-2 text-green-700">Essential services: Enroll {{puppy.name}}’s microchip & registration</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        {{puppy.name}} comes with a microchip for safety. AKC Reunite helps ensure it’s registered and trackable to you.
+      </p>
+      <div class="bg-white p-4 rounded-lg shadow mb-10 flex flex-col md:flex-row gap-4 items-center">
+        <img src="{{ url_for('static', filename='akc.png') }}" class="w-32 h-24 object-contain rounded bg-gray-50" />
+        <div class="flex-1">
+          <h4 class="font-semibold">AKC Reunite Enrollment</h4>
+          <p class="text-sm text-gray-600 mb-2">$25.00</p>
+          <p class="text-sm text-gray-600 mb-2">Enroll your pup’s microchip for full protection and tracking.</p>
+          
+<div class="flex gap-4">
+  <button id="start_2" onclick="toggleEssential(this, 'AKC Reunite Enrollment', 25)" class="akc-btn bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">✓ Added</button>
+  <button id="start_2" onclick="toggleEssential(this, 'AKC Reunite Enrollment', 25)" class="akc-btn-add text-blue-600 underline text-sm hidden">+ Add</button>
+</div>
+
+        </div>
+      </div>
+  
+      <!-- Note -->
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-6 text-sm">
+        <strong>Please note:</strong> A 10-year health commitment requires microchip registration and pet insurance.
+      </div>
+  
+      <!-- Terms -->
+      <div class="bg-white p-4 mt-6 rounded-md text-sm border">
+        <label class="flex items-start gap-3">
+          <input type="checkbox" checked class="mt-1 accent-blue-600">
+          To proceed with the adoption, please check this box to confirm that you have read and agree to the 
+          <a href="#" class="underline text-blue-600">Terms and Conditions of Sale</a>, 
+          <a href="#" class="underline text-blue-600">Terms of Commitment</a>, 
+          <a href="#" class="underline text-blue-600">Terms of Use</a>, and 
+          <a href="#" class="underline text-blue-600">Privacy Policy</a>.
+        </label>
+      </div>
+  
+      <!-- Continue -->
+      <div class="mt-8 text-center">
+        <button id="submit-essentials" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full">
+          Continue to payment
+        </button>
+      </div>
+    </div>
+  
+    <!-- Right Summary -->
+    <div class="sticky top-20 bg-white rounded-xl shadow p-6">
+      <h3 class="font-semibold text-lg mb-4">Summary</h3>
+      <div class="flex items-center gap-4 mb-4">
+        <img src="{{ url_for('static', filename='uploads/'~image_list[0]) }}" alt="{{puppy.name}}" class="w-16 h-16 rounded object-cover">
+        <div>
+          <p class="font-bold">{{puppy.name}}</p>
+          <p class="text-sm text-gray-500">{{puppy.gender}} • {{puppy.age}} weeks<br>Golden Retriever</p>
+          <p class="text-xs text-gray-400">ID #{{puppy.id}}</p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between"><span>{{puppy.name}}</span><span id="puppy-price">${{puppy.price}}</span></div>
+        <div class="flex justify-between"><span>Delivery</span><span id="delivery-cost">FREE</span></div>
+        <div class="flex justify-between"><span>Nose-to-tail health check</span><span>FREE</span></div>
+        <div class="flex justify-between"><span>Fetch Insurance Quote</span><span>FREE</span></div>
+        <div id="summary-akc" class="flex justify-between"><span>AKC Reunite Enrollment</span><span>$25.00</span></div>
+        <div id="summary-starter" class="flex justify-between"><span>Starter Kit</span><span>$95.00</span></div>
+      </div>
+      <hr class="my-4">
+      <div class="flex justify-between font-bold text-lg">
+        <span>Total</span><span id="summary-total"></span>
+      </div>
+      
+       
+    </div>
+  </div>
+  
+  

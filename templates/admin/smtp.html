@@ -1,0 +1,149 @@
+{% extends "admin/base.html" %}
+
+{% block title %}SMTP Settings - Admin Panel{% endblock %}
+{% block heading %}SMTP Settings{% endblock %}
+
+
+<!-- Form Fields Macro -->
+{% macro form_fields(prefix='') %}
+  <div>
+    <label for="{{ prefix }}smtp_server" class="block text-sm text-gray-300">SMTP Server</label>
+    <input type="text" id="{{ prefix }}smtp_server" name="smtp_server" required class="w-full p-2 rounded bg-[#232323] border border-gray-700 text-white">
+  </div>
+  <div>
+    <label for="{{ prefix }}smtp_port" class="block text-sm text-gray-300">SMTP Port</label>
+    <input type="number" id="{{ prefix }}smtp_port" name="smtp_port" required class="w-full p-2 rounded bg-[#232323] border border-gray-700 text-white">
+  </div>
+  <div>
+    <label for="{{ prefix }}email" class="block text-sm text-gray-300">Email</label>
+    <input type="email" id="{{ prefix }}email" name="email" required class="w-full p-2 rounded bg-[#232323] border border-gray-700 text-white">
+  </div>
+  <div>
+    <label for="{{ prefix }}username" class="block text-sm text-gray-300">Username</label>
+    <input type="text" id="{{ prefix }}username" name="username" required class="w-full p-2 rounded bg-[#232323] border border-gray-700 text-white">
+  </div>
+  <div>
+    <label for="{{ prefix }}password" class="block text-sm text-gray-300">Password</label>
+    <input type="password" id="{{ prefix }}password" name="password" required class="w-full p-2 rounded bg-[#232323] border border-gray-700 text-white">
+  </div>
+{% endmacro %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto p-6">
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed top-6 right-6 bg-gray-900 text-white px-4 py-2 rounded shadow-lg hidden z-50"></div>
+
+  <!-- Flash Messages -->
+  <div id="flash-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="mb-4 p-4 rounded text-white {{ 'bg-green-600' if category == 'success' else 'bg-red-600' }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+
+  {% if not settings %}
+    <!-- Add SMTP Settings -->
+    <form id="smtp-form" method="POST" class="bg-gray-800 p-6 rounded shadow-lg space-y-4">
+      <h2 class="text-xl font-bold mb-4 text-center text-white">Add SMTP Settings</h2>
+      {{ form_fields() }}
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 p-2 rounded text-white">Add Settings</button>
+    </form>
+  {% else %}
+    <!-- View SMTP Settings -->
+    <div class="bg-gray-800 p-6 rounded shadow-lg space-y-4">
+      <h2 class="text-xl font-bold mb-4 text-center text-white">Current SMTP Settings</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div><p class="text-sm font-medium text-gray-300">SMTP Server</p><p class="text-white">{{ settings.smtp_server }}</p></div><br>
+        <div><p class="text-sm font-medium text-gray-300">SMTP Port</p><p class="text-white">{{ settings.smtp_port }}</p></div><br>
+        <div><p class="text-sm font-medium text-gray-300">Email</p><p class="text-white">{{ settings.email }}</p></div><br>
+        <div><p class="text-sm font-medium text-gray-300">Username</p><p class="text-white">{{ settings.username }}</p></div><br>
+        <div><p class="text-sm font-medium text-gray-300">Password</p><p class="text-white">{{ settings.password }}</p></div><br>
+      </div>
+      <div class="flex space-x-4 mt-6">
+        <button id="edit-smtp" class="flex-1 bg-blue-600 hover:bg-blue-500 p-2 rounded text-white">Edit</button>
+        <button id="test-smtp" class="flex-1 bg-green-600 hover:bg-green-500 p-2 rounded text-white">Test</button>
+        <button id="delete-smtp" class="flex-1 bg-red-600 hover:bg-red-500 p-2 rounded text-white">Delete</button>
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-gray-800 p-6 rounded shadow-lg w-full max-w-md space-y-4">
+      <h2 class="text-xl font-bold mb-4 text-center text-white">Edit SMTP Settings</h2>
+      <form id="edit-smtp-form" class="space-y-4">
+        {{ form_fields('edit_') }}
+        <div class="flex space-x-4">
+          <button type="submit" class="flex-1 bg-blue-600 hover:bg-blue-500 p-2 rounded text-white">Save</button>
+          <button type="button" id="cancel-edit" class="flex-1 bg-gray-600 hover:bg-gray-500 p-2 rounded text-white">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function showToast(message, success = true) {
+  const toast = $('#toast');
+  toast.removeClass('hidden').text(message).css('background-color', success ? '#16a34a' : '#dc2626');
+  setTimeout(() => toast.addClass('hidden'), 3000);
+}
+
+$(function () {
+  $('#smtp-form, #edit-smtp-form').on('submit', function (e) {
+    e.preventDefault();
+    const formId = this.id;
+    $.post('/admin/smtp', $(`#${formId}`).serialize())
+      .done(res => {
+        if (res.success) {
+          $('#edit-modal').addClass('hidden');
+          showToast(res.message);
+          setTimeout(() => location.reload(), 1000);
+        } else {
+          showToast(res.message, false);
+        }
+      })
+      .fail(xhr => showToast(xhr.responseJSON?.message || 'Unknown error', false));
+  });
+
+  $('#edit-smtp').click(() => {
+    $('#edit_smtp_server').val('{{ settings.smtp_server }}');
+    $('#edit_smtp_port').val('{{ settings.smtp_port }}');
+    $('#edit_email').val('{{ settings.email }}');
+    $('#edit_username').val('{{ settings.username }}');
+    $('#edit_password').val('');
+    $('#edit-modal').removeClass('hidden');
+  });
+
+  $('#cancel-edit').click(() => $('#edit-modal').addClass('hidden'));
+
+  $('#test-smtp').click(() => {
+    $.post('/admin/smtp/test')
+      .done(res => showToast(res.message))
+      .fail(xhr => showToast(xhr.responseJSON?.message || 'Test failed', false));
+  });
+
+  $('#delete-smtp').click(() => {
+    if (confirm('Are you sure?')) {
+      $.post('/admin/smtp/delete')
+        .done(res => {
+          if (res.success) {
+            showToast(res.message);
+            setTimeout(() => location.reload(), 1000);
+          } else {
+            showToast(res.message, false);
+          }
+        })
+        .fail(xhr => showToast(xhr.responseJSON?.message || 'Delete failed', false));
+    }
+  });
+});
+</script>
+{% endblock %}

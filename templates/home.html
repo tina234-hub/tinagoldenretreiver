@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <!-- page‑specific markup -->
+
+    <!-- Top green bar -->
+    <div class="bg-[#376e44] text-white text-center text-xs py-1">
+      Call our Puppy Concierge: 888-671-0518 · 8AM-9PM EST
+    </div>
+
+   
+
+    <!-- Hero Section -->
+    <section class="relative flex justify-center items-center h-[350px] w-full" style="background:#d0a997">
+        <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="object-cover w-full h-full absolute top-0 left-0 opacity-50"
+      >
+        <source
+          src="https://cdn.buttercms.com/OBoCndz5SP23zXL3J7nX"
+          type="video/mp4"
+      />
+        <!-- Fallback text for unsupported browsers -->
+        Sorry, your browser doesn’t support embedded videos.
+      </video>
+      <div class="relative max-w-2xl mx-auto text-center z-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Where puppy love begins</h1>
+        <p class="text-white text-lg mb-6">America’s leading puppy adoption service</p>
+        <div class="flex items-center justify-center gap-2 mb-3">
+          <input type="text" placeholder="Search by breed or puppy name..." class="rounded-full px-3 py-2 w-72 max-w-full shadow border border-gray-300 focus:outline-[#376e44]" />
+          <button class="bg-[#376e44] text-white rounded-full px-4 py-2 font-medium -ml-8 z-10">🔍</button>
+        </div>
+        <button class="bg-white rounded-full px-5 py-2 font-semibold text-[#376e44] shadow border border-[#376e44] hover:bg-[#f9fbfa]">
+          Browse all puppies
+        </button>
+      </div>
+      <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-white rounded-full py-1 px-4 shadow text-sm">
+        <span class="text-[#376e44] font-medium">★ Trustpilot</span>
+        <span class="text-gray-500">5,600+ reviews</span>
+      </div>
+    </section>
+
+    <!-- Promo banner -->
+    <section class="bg-[#376e44] text-white rounded-lg mx-4 md:mx-12 mt-6 p-5 flex items-center">
+      <img src="https://ext.same-assets.com/559516381/2435356643.jpeg" alt="Cute puppy" class="h-20 w-20 rounded-full object-cover border-4 border-white shadow mr-5" />
+      <div>
+        <p class="font-bold text-lg mb-1">Puppy Love - The Perfect Present</p>
+        <p class="text-sm">
+          Bring Home Puppy Love this Mother's Day. Adopt by <b>4/29</b> for Mother's Day Delivery.<br />
+          <span class="underline">Talk to a Puppy Concierge</span> for more details.
+        </p>
+      </div>
+    </section>
+
+    
+
+    <!-- Why PuppySpot -->
+    <section class="mt-12 mx-4 md:mx-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Why we're the leading puppy adoption service in America</h2>
+      <div class="flex flex-wrap justify-center gap-8 text-center">
+        <div class="w-36">
+          <div class="bg-[#e2c6a5] rounded-full w-16 h-16 flex justify-center items-center mx-auto mb-2">🐾</div>
+          <p class="font-semibold">Your Perfect Puppy</p>
+          <span class="text-xs text-gray-500">Breeds in every size, color and personality.</span>
+        </div>
+        <div class="w-36">
+          <div class="bg-[#d0a997] rounded-full w-16 h-16 flex justify-center items-center mx-auto mb-2">🏅</div>
+          <p class="font-semibold">Certified Breeders</p>
+          <span class="text-xs text-gray-500">Licensed, vetted breeders committed to our pups.</span>
+        </div>
+        <div class="w-36">
+          <div class="bg-[#cad4d1] rounded-full w-16 h-16 flex justify-center items-center mx-auto mb-2">🩺</div>
+          <p class="font-semibold">10-Year Health Commitment</p>
+          <span class="text-xs text-gray-500">Health checked, vaccinated, and dewormed pups.</span>
+        </div>
+        <div class="w-36">
+          <div class="bg-[#a48d64] rounded-full w-16 h-16 flex justify-center items-center mx-auto mb-2">🚚</div>
+          <p class="font-semibold">Handle with Care Delivery</p>
+          <span class="text-xs text-gray-500">Private rides, global delivery options.</span>
+        </div>
+        <div class="w-36">
+          <div class="bg-[#9d9e98] rounded-full w-16 h-16 flex justify-center items-center mx-auto mb-2">💜</div>
+          <p class="font-semibold">Caring Experts</p>
+          <span class="text-xs text-gray-500">Help every step to find your perfect puppy.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="mt-12 mx-4 md:mx-12">
+      <div class="bg-[#f9fbfa] rounded-xl p-8 flex flex-wrap gap-6 items-center justify-center">
+        <div class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 flex flex-col items-start shadow">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-green-600 text-2xl">★★★★★</span>
+            <span class="text-sm text-gray-500 ml-2">Verified Puppy Owners</span>
+          </div>
+          <div class="text-xl font-bold mb-1">Puppy parents love us</div>
+          <p class="text-gray-600 mb-3 text-sm">Hear from our puppy parents who used our services to bring home their puppy.</p>
+          <button class="border rounded-full px-4 py-1 text-[#376e44] border-[#376e44] hover:bg-[#f0f9f4]">Read all reviews</button>
+        </div>
+
+        <!-- Example Review 1 -->
+        <div class="max-w-xs flex flex-col gap-2">
+          <img src="https://ext.same-assets.com/559516381/812382316.jpeg" alt="Happy puppy" class="rounded-lg object-cover w-full h-32" />
+          <span class="text-[#376e44] font-semibold">Dorothy G., Michigan</span>
+          <span class="text-xs text-gray-500">"Everything was clear and they answered all my questions. Our puppy is so cute."</span>
+        </div>
+
+        <!-- Example Review 2 -->
+        <div class="max-w-xs flex flex-col gap-2">
+          <img src="https://ext.same-assets.com/559516381/398911117.jpeg" alt="Another happy puppy" class="rounded-lg object-cover w-full h-32" />
+          <span class="text-[#376e44] font-semibold">Heather M., Texas</span>
+          <span class="text-xs text-gray-500">"Very helpful and informative regarding puppy's delivery. Love our new furbaby!"</span>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-6">
+        <div class="bg-[#e2c6a5] px-6 py-2 rounded-full">
+          Need help finding you new best friend? Start with our <span class="underline font-semibold">Breed Match Quiz</span>
+          <button class="ml-2 bg-[#376e44] text-white px-4 py-1 rounded-full">Take Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    
+  
+{% endblock %}

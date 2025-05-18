@@ -1,0 +1,74 @@
+{% extends "admin/base.html" %}
+{% block title %}Settings{% endblock %}
+{% block heading %}Site Settings{% endblock %}
+
+{% block content %}
+<div class="bg-[#1b1b1b] p-6 rounded-lg">
+  <form id="settingsForm" class="space-y-4" enctype="multipart/form-data">
+    <input class="w-full p-2 border border-gray-700 bg-[#232323] text-white rounded" type="text" name="site_name" placeholder="Site Name" class="input" required>
+    <input class="w-full p-2 border border-gray-700 bg-[#232323] text-white rounded" type="text" name="username" placeholder="Username" class="input" required>
+    <input class="w-full p-2 border border-gray-700 bg-[#232323] text-white rounded" type="text" name="phonenumber" placeholder="Phone Number" class="input">
+    <input class="w-full p-2 border border-gray-700 bg-[#232323] text-white rounded" type="text" name="call_no" placeholder="Calling Phone Number" class="input">
+    <input class="w-full p-2 border border-gray-700 bg-[#232323] text-white rounded" type="email" name="email" placeholder="Email" class="input">
+    <input type="url" name="facebook_link" placeholder="Facebook Page Link" class="block w-full p-2 mb-4 bg-gray-800 text-white rounded border border-gray-600">
+    <input type="url" name="ig_link" placeholder="Instagram Link" class="block w-full p-2 mb-4 bg-gray-800 text-white rounded border border-gray-600">
+    <input class="w-full p-2 border border-gray-700 bg-[#232323] text-white rounded" type="password" name="password" placeholder="Password" class="input">
+    
+    <label class="block text-white">Logo</label>
+    <input  class="w-full p-2 border border-gray-700 bg-[#232323] text-white rounded"type="file" name="logo" class="input" onchange="previewLogo(event)">
+    <div id="logoPreview" class="mt-2"></div>
+
+    <button type="submit" class="bg-green-500 text-white p-3 rounded w-full">Save Settings</button>
+  </form>
+</div>
+
+<script>
+function previewLogo(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      document.getElementById("logoPreview").innerHTML =
+        `<img src="static/uploads/${e.target.result}" class="w-24 h-24 object-cover rounded">`;
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("/admin/get_settings")
+    .then(res => res.json())
+    .then(data => {
+      document.querySelector("input[name='username']").value = data.username || "";
+      document.querySelector("input[name='username']").value = data.username || "";
+      document.querySelector("input[name='site_name']").value = data.site_name || "";
+      document.querySelector("input[name='phonenumber']").value = data.phonenumber || "";
+      document.querySelector("input[name='facebook_link']").value = data.facebook_link || "";
+      document.querySelector("input[name='ig_link']").value = data.ig_link || "";
+      document.querySelector("input[name='call_no']").value = data.call_number || "";
+      document.querySelector("input[name='email']").value = data.email || "";
+      
+
+
+      if (data.logo) {
+        document.getElementById("logoPreview").innerHTML =
+          `<img src="/static/uploads/${data.logo}" class="w-24 h-24 object-cover rounded">`;
+      }
+    });
+
+  document.getElementById("settingsForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+
+    fetch("/admin/update_settings", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) alert("Settings updated!");
+    });
+  });
+});
+</script>
+{% endblock %}

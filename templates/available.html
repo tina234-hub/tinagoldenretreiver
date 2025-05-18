@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Available Puppies{% endblock %}
+
+{% block content %}
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-black">
+
+  <!-- Breadcrumbs -->
+  <nav class="text-sm text-gray-600 mb-4">
+    <a href="/" class="hover:underline">PuppySpot</a> / <span>Puppies for Sale</span>
+  </nav>
+
+  <!-- Heading -->
+  <h1 class="text-3xl font-bold mb-2">Available Puppies</h1>
+
+  <!-- Description -->
+  <p class="mb-6 text-gray-700">
+    Welcome to Tina's Golden Retreivers! Take a moment to browse our incredible selection of adorable, ready for love puppies.
+    We only work with the country’s top breeders, offer three handle with care delivery options and a 10-year health commitment.
+    So wherever you live we can deliver your perfect puppy! Complimentary consultations with one of our Puppy Concierges are available when you’re ready.
+  </p>
+
+  <!-- Available count and sort -->
+  <div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mb-6 gap-2">
+    <div>
+      <span class="font-bold text-lg">{{ puppies|length }}</span> Available Puppies
+    </div>
+    
+    
+    <div class="relative">
+      <label for="sort" class="text-sm font-medium mr-2">Sort by</label>
+      <select id="sort" name="sort" class="border border-gray-300 rounded-md text-sm py-1 px-2">
+        <option>Featured</option>
+        <option>Age: Youngest</option>
+        <option>Age: Oldest</option>
+        <option>Breed A–Z</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Puppy Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {% for puppy in puppies %}
+
+    <div class="bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden relative">
+      <a href="preview?id={{puppy.id}}" class="absolute inset-0 z-10" aria-label="View Puppy Details"></a>
+
+      <div class="relative">
+      
+        {% set image_list = puppy.images.split(',')%}
+       
+        <img src="{{ url_for('static', filename='uploads/'~image_list|random) }}" alt="Obie"
+             class="w-full h-48 object-cover">
+        <!-- Video icon -->
+        <div class="absolute top-2 left-2 bg-white bg-opacity-75 rounded">
+          <svg class="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4 4v16l12-8z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="p-4">
+        <p class="font-semibold text-lg">{{puppy.name}}</p>
+        <p class="text-sm text-gray-600">Golden Retreiver</p>
+        <p class="text-sm text-gray-500">{{puppy.age}} weeks</p>
+      </div>
+      <!-- Heart Icon -->
+      <div class="absolute bottom-2 right-2">
+        
+        <button class="bg-white p-1 rounded-full shadow hover:text-red-500 transition">
+          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M5.318 6.318a4.5 4.5 0 016.364 0L12 6.636l.318-.318a4.5 4.5 0 116.364 6.364L12 21.364l-6.682-6.682a4.5 4.5 0 010-6.364z"/>
+          </svg>
+        </button>
+    
+      
+      </div>
+    </div>
+    {% endfor %}
+    <!-- Puppy Card -->
+   
+    <!-- Repeat above card with different puppy info -->
+    <!-- You can use a loop if rendering from backend -->
+
+  </div>
+</div>
+{% endblock %}

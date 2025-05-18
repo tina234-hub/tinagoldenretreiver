@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block title %}Our Perfect Puppy Promise{% endblock %}
+
+{% block content %}
+<div class="bg-green-50 py-10 px-4 sm:px-8 lg:px-16 text-black">
+
+  <!-- Header Section -->
+  <div class="max-w-screen-xl mx-auto text-center">
+    <h1 class="text-4xl font-bold mb-4">Our Perfect Puppy Promise</h1>
+    <p class="text-lg text-gray-700">
+      We promise to do everything we can to provide you with your perfect puppy and to have your experience with us
+      leave you with a big smile and a warm heart.
+    </p>
+  </div>
+</div>
+
+
+
+<!-- Main Section -->
+<div class="max-w-screen-xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
+
+  <!-- Top Image + Info Card -->
+  <div class="relative">
+    <!-- Main Image -->
+    <img src="https://cdn.buttercms.com/9d5F4EO5SwaRkMPTRads" alt="Happy family with puppy" class="rounded-lg w-full max-h-[500px] object-cover">
+
+    <!-- Info Card -->
+    <div class="absolute top-4 right-4 bg-green-100 text-gray-800 p-6 rounded-xl shadow-lg w-full sm:w-[320px]">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+          👪
+        </div>
+        <div>
+          <h3 class="font-bold text-lg leading-tight">{{site.site_name}} is the<br>undisputed leader</h3>
+        </div>
+      </div>
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold">•</span>
+          <span class="ml-2">Founded in 2005 with close to 20 years of experience</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold">•</span>
+          <span class="ml-2">Overall rating of 4.7 out of 5 for our families</span>
+        </li>
+      </ul>
+      <button class="mt-4 px-4 py-2 border rounded-full hover:bg-gray-100 text-sm font-medium">
+        Read Reviews
+      </button>
+    </div>
+  </div>
+
+  <!-- Testimonial Images -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+    <img src="https://cdn.buttercms.com/UdUS496aT4mgGi5qS8wJ" alt="Child with puppy" class="rounded-lg w-full object-cover h-80">
+    <img src="https://cdn.buttercms.com/yrfMN9DSNCuQ240KhiPp" alt="Family with puppy" class="rounded-lg w-full object-cover h-80">
+    <img src="https://cdn.buttercms.com/0gv3jOwGTJEDcMXaHwAP" alt="Family with puppy" class="rounded-lg w-full object-cover h-80">
+  </div>
+<!-- Certified Breeder Partners Section -->
+<div class="bg-blue-50 py-12 px-6 mt-10">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <img src="https://cdn.buttercms.com/0Nffu6uTJGlhCZ4ra4aj" alt="Icon" class="mx-auto w-16 h-16 mb-4">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-8">A National Network of Certified Breeder Partners</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="flex items-start gap-3">
+          <span class="text-green-600 text-xl">✔️</span>
+          <p>Care standards are designed by an independent Scientific Advisory Board</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-green-600 text-xl">✔️</span>
+          <p>Ranked the most rigorous screening process in the industry</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-green-600 text-xl">✔️</span>
+          <p>Annual audits to ensure ongoing conformance from our breeders</p>
+        </div>
+      </div>
+      <button class="mt-8 px-6 py-2 border rounded-full hover:bg-gray-100 font-medium">Learn More</button>
+    </div>
+  </div>
+  
+  <!-- Health Evaluation Section -->
+  <div class="flex flex-col lg:flex-row gap-6 mt-10 px-6">
+    <div class="flex-1">
+      <img src="https://cdn.buttercms.com/1ILMCuRnSsqJMki8xoZ9" alt="Puppy diagram" class="w-full rounded-lg">
+    </div>
+    <div class="flex-1 bg-green-200 p-6 rounded-lg">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="https://cdn.buttercms.com/IlSjnyKoTjO3aox2vr73" alt="Icon" class="w-10 h-10">
+        <h3 class="text-xl font-bold">{{site.site_name}}'s Comprehensive Health Evaluation</h3>
+      </div>
+      <ul class="space-y-3 text-sm text-gray-800">
+        <li class="flex items-start"><span class="text-green-600 text-lg">✔️</span><span class="ml-2">Every Breeder Partner is required to keep their puppies up-to-date on all vaccinations and deworming regimens</span></li>
+        <li class="flex items-start"><span class="text-green-600 text-lg">✔️</span><span class="ml-2">Prior to delivery each newly adopted puppy must pass a “nose to tail” health evaluation conducted by a licensed veterinarian</span></li>
+        <li class="flex items-start"><span class="text-green-600 text-lg">✔️</span><span class="ml-2">All insured puppies are covered by our 10-year Health Commitment</span></li>
+      </ul>
+      <button class="mt-6 px-6 py-2 border rounded-full hover:bg-gray-100 font-medium">Learn More</button>
+    </div>
+  </div>
+  
+  <!-- Delivered by Love Section -->
+  <div class="bg-blue-50 py-12 px-6 mt-10">
+    <div class="max-w-screen-xl mx-auto grid lg:grid-cols-2 gap-6">
+      <img src="https://cdn.buttercms.com/RT4E09z6RNyFPsNGnCZc" alt="Delivery image" class="w-full rounded-lg">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="https://cdn.buttercms.com/gDWXurJ4RSJ4mN4TD4Qw" alt="Icon" class="w-10 h-10">
+          <h3 class="text-xl font-bold">Delivered by Love</h3>
+        </div>
+        <ul class="space-y-3 text-sm text-gray-800">
+          <li class="flex items-start"><span class="text-green-600 text-lg">✔️</span><span class="ml-2">We only work with transport partners that love puppies as much as we do</span></li>
+          <li class="flex items-start"><span class="text-green-600 text-lg">✔️</span><span class="ml-2">USDA certified transporters that provide a range of handle with care options</span></li>
+          <li class="flex items-start"><span class="text-green-600 text-lg">✔️</span><span class="ml-2">We guarantee that the delivery experience is as stress-free as possible</span></li>
+        </ul>
+        <button class="mt-6 px-6 py-2 border rounded-full hover:bg-gray-100 font-medium">Learn More</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- {{site.site_name}} Gives Back -->
+  <div class="bg-green-100 py-12 px-6 mt-10 text-center">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <img src="	https://cdn.buttercms.com/pPfukNfSfSil4h9kag7v" alt="Icon" class="w-10 h-10">
+        <h3 class="text-2xl font-semibold">{{site.site_name}} Gives Back</h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 text-left mt-8">
+        <div class="flex items-start gap-3">
+          <span class="text-green-600 text-lg">✔️</span>
+          <p>{{site.site_name}} is an official Make-A-Wish national partner</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-green-600 text-lg">✔️</span>
+          <p>Team members are encouraged to volunteer at local shelters</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-green-600 text-lg">✔️</span>
+          <p>Our Retired Dogs Program focuses on rehoming and retired dogs whose families can no longer take care of them</p>
+        </div>
+      </div>
+      <button class="mt-8 px-6 py-2 border rounded-full hover:bg-gray-100 font-medium">Learn More</button>
+    </div>
+  </div>
+  
+</div>
+{% endblock %}

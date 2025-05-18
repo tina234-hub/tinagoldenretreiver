@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<br>
+<div class="max-w-md mx-auto mb-10">
+    <form action="/track" method="GET" class="flex">
+      <input 
+        type="text" name="q" 
+        placeholder="Enter tracking number..." 
+        value="{{ order.tracking_number }}" 
+        class="flex-grow border border-gray-300 px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-green-500" 
+        required
+      />
+      <button 
+        type="submit" 
+        class="bg-green-600 text-white px-6 rounded-r-md hover:bg-green-700">
+        Track
+      </button>
+    </form>
+  </div>
+  
+  
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold text-center mb-4">ORDER TRACKING PAGE</h2>
+    <p class="text-center text-sm text-gray-500 mb-6">
+      Please note that these are accurate but not guaranteed estimates. Delivery date is subject to change without advanced notice.
+    </p>
+  
+    <div class="border rounded-md p-4 grid md:grid-cols-4 text-sm font-medium mb-8">
+      <div>
+        <p class="text-gray-500">ORDER PLACED</p>
+        <p>{{ order.created_at }}</p>
+      </div>
+      <div>
+        <p class="text-gray-500">TOTAL</p>
+        <p>${{ order.price }}</p>
+      </div>
+      <div>
+        <p class="text-gray-500">SHIP TO</p>
+        <p>{{ order.customer_name }}<br>{{ order.customer_address }}</p>
+      </div>
+      <div>
+        <p class="text-gray-500">ORDER</p>
+        <p>#{{ order.puppy_id }}</p>
+      </div>
+    </div>
+  
+    <h3 class="text-lg font-semibold text-center mb-2">Order Status: {{ order.status }}</h3>
+    <p class="text-center text-sm text-gray-500 mb-10">Estimated Delivery Date: {{ estimated_range }}</p>
+  
+    <div class="grid grid-cols-5 text-center gap-4 mb-10">
+      {% for step in timeline %}
+        <div class="flex flex-col items-center text-center">
+          <div class="text-xl">
+            {% if step.status == 'done' %}✅{% else %}⭕{% endif %}
+          </div>
+          <div class="text-sm font-semibold">{{ step.label }}</div>
+          <div class="text-xs text-gray-500">{{ step.date }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  
+    <h4 class="text-sm font-bold text-gray-600 mb-2">SHIPPING INFORMATION</h4>
+    <p class="text-sm text-gray-700">{{ order.customer_address }}</p>
+    <p class="text-sm text-gray-700">{{ order.puppy_name }}</p>
+  
+    <div class="mt-6 h-64">
+      <iframe class="w-full h-full rounded-md" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q={{ order.customer_address | urlencode }}"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+ {%endblock%} 

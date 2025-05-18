@@ -1,0 +1,201 @@
+{% extends "admin/base.html" %}
+{% block title %}Reviews{% endblock %}
+
+{% block content %}
+<div class="p-6 bg-[#1b1b1b] text-white rounded shadow">
+  <h2 class="text-xl mb-4">Add Review</h2>
+  <form id="reviewForm" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Name" required class="block mb-2 p-2 bg-[#232323] border border-gray-600 rounded w-full">
+    <div id="dropzone" class="border border-dashed border-gray-500 rounded p-4 text-center mb-2 cursor-pointer">Drop or Paste Image Here</div>
+    <input type="file" name="picture" accept="image/*" class="block mb-2 hidden">
+    <div id="preview" class="mb-2"></div>
+    <textarea name="review_text" placeholder="Review" required class="block mb-2 p-2 bg-[#232323] border border-gray-600 rounded w-full"></textarea>
+    <input type="date" name="date" required class="block mb-2 p-2 bg-[#232323] border border-gray-600 rounded w-full">
+    <button type="submit" class="bg-green-500 hover:bg-green-600 p-2 rounded text-white">Submit Review</button>
+  </form>
+
+  <h2 class="text-xl mt-8 mb-4">All Reviews</h2>
+</div>
+<div id="reviewsContainer" class="space-y-4"></div>
+<!-- Edit Review Modal -->
+<div id="editReviewModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-[#1b1b1b] text-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <h3 class="text-lg mb-4">Edit Review</h3>
+      <form id="editReviewForm" enctype="multipart/form-data">
+        <input type="hidden" name="id" id="editId">
+        <input type="text" name="name" id="editName" placeholder="Name" class="block mb-2 p-2 bg-[#232323] border border-gray-600 rounded w-full">
+        <textarea name="review_text" id="editText" placeholder="Review" class="block mb-2 p-2 bg-[#232323] border border-gray-600 rounded w-full"></textarea>
+        <input type="date" name="date" id="editDate" class="block mb-2 p-2 bg-[#232323] border border-gray-600 rounded w-full">
+        <input type="file" name="picture" class="block mb-2">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded">Update Review</button>
+        <button type="button" onclick="closeEditModal()" class="text-gray-300 hover:underline ml-4">Cancel</button>
+      </form>
+    </div>
+</div>
+
+<script>
+function isAllowedImage(file) {
+  return ["image/png", "image/jpeg", "image/jpg", "image/gif"].includes(file.type.toLowerCase());
+}
+
+function showPreview(file, container) {
+  const reader = new FileReader();
+  reader.onload = e => {
+    container.innerHTML = `<img src="${e.target.result}" class="w-24 h-24 object-cover rounded">`;
+  };
+  reader.readAsDataURL(file);
+}
+
+const dropzone = document.getElementById("dropzone");
+const fileInput = document.querySelector("input[name='picture']");
+const preview = document.getElementById("preview");
+const dt = new DataTransfer();
+
+['dragover', 'dragenter'].forEach(event => {
+  dropzone.addEventListener(event, e => {
+    e.preventDefault();
+    dropzone.classList.add("bg-gray-700");
+  });
+});
+
+['dragleave', 'drop'].forEach(event => {
+  dropzone.addEventListener(event, () => dropzone.classList.remove("bg-gray-700"));
+});
+
+dropzone.addEventListener("drop", e => {
+  e.preventDefault();
+  const items = e.dataTransfer.items;
+
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+
+    if (item.kind === 'file') {
+      const file = item.getAsFile();
+      if (isAllowedImage(file)) {
+        preview.innerHTML = '';
+        dt.items.clear();
+        dt.items.add(file);
+        showPreview(file, preview);
+        fileInput.files = dt.files;
+      } else {
+        alert("Only PNG, JPG, JPEG, and GIF files are allowed.");
+      }
+    }
+
+    if (item.kind === 'string' && item.type === 'text/uri-list') {
+      item.getAsString(async (url) => {
+        try {
+          const proxyUrl = `https://images.weserv.nl/?url=${encodeURIComponent(url.replace(/^https?:\/\//, ''))}`;
+          const response = await fetch(proxyUrl);
+          const blob = await response.blob();
+
+          if (!isAllowedImage(blob)) {
+            alert("Only PNG, JPG, JPEG, and GIF images are allowed.");
+            return;
+          }
+
+          const filename = `image${Date.now()}.png`;
+          const file = new File([blob], filename, { type: blob.type });
+
+          preview.innerHTML = '';
+          dt.items.clear();
+          dt.items.add(file);
+          showPreview(file, preview);
+          fileInput.files = dt.files;
+        } catch (err) {
+          alert("Failed to load image from the web.");
+        }
+      });
+    }
+  }
+});
+
+function fetchReviews() {
+  fetch("/admin/show_reviews")
+    .then(res => res.json())
+    .then(reviews => {
+      const container = document.getElementById("reviewsContainer");
+      container.innerHTML = reviews.length > 0 ? `
+<table class="w-full text-left border border-gray-700 text-white">
+  <thead>
+    <tr class="bg-gray-800 text-sm">
+      <th class="p-2 border border-gray-700">Name</th>
+      <th class="p-2 border border-gray-700">Picture</th>
+      <th class="p-2 border border-gray-700">Review</th>
+      <th class="p-2 border border-gray-700">Date</th>
+      <th class="p-2 border border-gray-700">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    ${reviews.map(r => `
+      <tr class="border border-gray-700 hover:bg-gray-900">
+        <td class="p-2">${r.name}</td>
+        <td class="p-2">
+          ${r.picture ? `<img src="/static/uploads/${r.picture}" class="w-16 h-16 object-cover rounded">` : 'No Image'}
+        </td>
+        <td class="p-2">${r.review_text}</td>
+        <td class="p-2">${r.date}</td>
+        <td class="p-2 space-x-2">
+          <button onclick="openEditModal(${r.id}, '${r.name}', \`${r.review_text.replace(/`/g, "\\`")}\`, '${r.date}')" class="text-blue-400 hover:underline">Edit</button>
+          <button onclick="deleteReview(${r.id})" class="text-red-400 hover:underline">Delete</button>
+        </td>
+      </tr>
+    `).join("")}
+  </tbody>
+</table>
+` : `<p class="text-gray-400">No reviews available.</p>`;
+    });
+}
+
+function deleteReview(id) {
+  fetch(`/admin/delete_review/${id}`, { method: "POST" })
+    .then(res => res.json())
+    .then(() => fetchReviews());
+}
+
+document.getElementById("reviewForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  fetch("/admin/add_review", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.json())
+  .then(() => {
+    e.target.reset();
+    preview.innerHTML = "";
+    fetchReviews();
+  });
+});
+
+function openEditModal(id, name, text, date) {
+  document.getElementById("editId").value = id;
+  document.getElementById("editName").value = name;
+  document.getElementById("editText").value = text;
+  document.getElementById("editDate").value = date;
+  document.getElementById("editReviewModal").classList.remove("hidden");
+}
+
+function closeEditModal() {
+  document.getElementById("editReviewModal").classList.add("hidden");
+  document.getElementById("editReviewForm").reset();
+}
+
+document.getElementById("editReviewForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  fetch("/admin/update_review", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.json())
+  .then(() => {
+    closeEditModal();
+    fetchReviews();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", fetchReviews);
+</script>
+
+{% endblock %}

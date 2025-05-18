@@ -1,0 +1,247 @@
+
+<div class="max-w-screen-xl mx-auto px-4 py-8">
+    <!-- Step Navigation with SVGs -->
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Left: {{puppy.name}} Header + Form -->
+      <div class="md:col-span-2 space-y-10">
+        <!-- Banner -->
+        <div class="relative bg-green-100 rounded-xl flex items-center justify-between px-6 py-6">
+          <div class="absolute top-0 left-0 w-20 h-20 bg-green-600 rounded-br-[40px]"></div>
+          <div class="absolute top-0 right-0 w-20 h-20 bg-green-600 rounded-bl-[40px]"></div>
+          <div class="absolute bottom-0 right-8 w-12 h-12 text-green-600">
+            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 9c1.104 0 2-.896 2-2S10.104 5 9 5 7 5.896 7 7s.896 2 2 2zm7.07 6.07a3.003 3.003 0 0 0 0-4.24 2.99 2.99 0 0 0-2.12-.88 3.003 3.003 0 0 0-2.12.88l-4.95 4.95a3.003 3.003 0 0 0 0 4.24c.586.586 1.354.88 2.12.88s1.534-.293 2.12-.88l4.95-4.95z"/>
+            </svg>
+          </div>
+          <div class="z-10 mx-auto text-center">
+            {% set image_list = puppy.images.split(',')%}
+            <img src="{{ url_for('static', filename='uploads/'~image_list[0]) }}" alt="{{puppy.name}}" class="mx-auto w-24 h-24 rounded-lg object-cover mb-3">
+            <h2 class="text-2xl font-black">Let's bring {{puppy.name}} home!</h2>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div>
+          <h3 class="text-xl font-bold text-green-700 mb-1">Contact details</h3>
+          <p class="text-sm text-gray-600 mb-3">Tell us a bit about yourself so we can ensure {{puppy.name}} finds a safe and happy home!</p>
+          <hr class="border-green-600 mb-6">
+          <form class="space-y-6" id="deliveryform">
+            <div>
+              <label class="block text-sm font-semibold mb-1">Enter your email</label>
+              <input type="email" name="email" placeholder="Email*" class="w-full border border-gray-300 rounded-md p-3 focus:ring-green-500 focus:border-green-500">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1">Enter your name</label>
+              <input type="text" name="fullname"  placeholder="Full Name*" class="w-full border border-gray-300 rounded-md p-3 focus:ring-green-500 focus:border-green-500">
+            <span class="text-sm text-red-600 hidden" id="name-error"> Enter your full name</span>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-1">Enter your phone number*</label>
+                <input type="text" name="phonenumber" id="phonenumber" placeholder="Phone Number*" class="w-full border border-gray-300 rounded-md p-3 focus:ring-green-500 focus:border-green-500">
+                <span class="text-sm text-red-600 hidden" id="phone-error">enter a valid US number </span>
+                <input type="checkbox" name="" id="">
+                <label class="tw-font-inter tw-text-gray-02 tw-text-sm m_8ee546b8 mantine-Checkbox-label" for="mantine-1bi66x9o3">Opt in for SMS updates on <span class="tw-capitalize">{{puppy.name}}<!-- -->.</span> You can opt out anytime.</label>
+              </div>
+              <h2 class="text-xl font-bold mb-1">What will be {{puppy.name}}'s new home address?</h2>
+              <p class="text-sm text-gray-600 mb-6">
+                Full address is needed for {{puppy.name}}’s Health Certificate and to help us determine available delivery programs.
+              </p>
+                        <!-- Address Autocomplete -->
+                <label class="block text-sm font-semibold mb-1">Address *</label>
+                <input type="text" name="add1" id="autocomplete" placeholder="Start typing address"
+                class="w-full p-3 border border-red-400 rounded-md mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                <!-- Optional Apartment -->
+                <label class="block text-sm font-semibold mb-1">Apartment/Unit (Optional)</label>
+                <input type="text" name="add2" class="w-full p-3 border border-gray-300 rounded-md mb-4" />
+
+                <!-- City -->
+                <label class="block text-sm font-semibold mb-1">City *</label>
+                <input type="text" name="add3" id="city" class="w-full p-3 border border-gray-300 rounded-md mb-4" />
+                <!-- State -->
+                <label class="block text-sm font-semibold mb-1">State *</label>
+                <select id="state" name="add4" class="w-full p-3 border border-gray-300 rounded-md mb-4">
+                <option value="">Select a state</option>
+                <option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option>
+                <option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option>
+                <option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option>
+                <option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option>
+                <option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option>
+                <option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option>
+                <option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
+                </select>
+
+                <!-- Zip Code -->
+                <label class="block text-sm font-semibold mb-1">Zip Code *</label>
+                <input type="text" name="add5" id="zipcode" class="w-full p-3 border border-gray-300 rounded-md mb-6" />
+
+                <!-- Age Check -->
+                <p class="text-sm font-semibold mb-2">Are you at least 18 years old?</p>
+                <div class="flex gap-4 mb-6">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="age" class="form-radio text-blue-600" /> <span class="ml-2">Yes</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="age" class="form-radio text-blue-600" /> <span class="ml-2">No</span>
+                    <p id="age-error" class="text-sm text-read-600 hidden"> you must be atleast 18 years old to continue</p>
+                </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button  type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700">
+                Continue to delivery programs
+                </button>
+
+
+            </form>
+
+  <script>
+    const form = document.getElementById("deliveryform");
+    const submitBtn = form.querySelector('button[type="submit"]');
+  
+    const fullNameInput = form.fullname;
+    const phoneInput = form.phonenumber;
+    const ageRadios = form.querySelectorAll('input[name="age"]');
+    const ageError = document.getElementById("age-error");
+    const nameError = document.getElementById("name-error");
+    const phoneError = document.getElementById("phone-error");
+  
+    function validateName() {
+      const fullName = fullNameInput.value.trim();
+      const nameParts = fullName.split(" ");
+      const isValid = nameParts.length >= 2 && nameParts.every(n => /^[A-Z][a-z]+$/.test(n));
+  
+      if (!isValid) {
+        nameError.style.display = "block";
+        fullNameInput.classList.add("border-red-500");
+      } else {
+        nameError.style.display = "none";
+        fullNameInput.classList.remove("border-red-500");
+      }
+      return isValid;
+    }
+  
+    function validatePhone() {
+      const phone = phoneInput.value.trim();
+      const pattern = '/^\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$/';
+      const isValid = pattern.test(phone);
+  
+      if (!isValid) {
+        phoneError.style.display = "block";
+        phoneInput.classList.add("border-red-500");
+      } else {
+        phoneError.style.display = "none";
+        phoneInput.classList.remove("border-red-500");
+      }
+      return isValid;
+    }
+  
+    function validateAge() {
+      const selected = form.querySelector('input[name="age"]:checked');
+      const isYes = selected?.value === "yes";
+  
+      if (!isYes) {
+        ageError.style.display = "block";
+        submitBtn.disabled = true;
+      } else {
+        ageError.style.display = "none";
+        submitBtn.disabled = false;
+      }
+  
+      return isYes;
+    }
+  
+    fullNameInput.addEventListener("blur", validateName);
+    phoneInput.addEventListener("blur", validatePhone);
+    ageRadios.forEach(r => r.addEventListener("change", validateAge));
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nameValid = validateName();
+      const phoneValid = validatePhone();
+      const ageValid = validateAge();
+  
+      if (!nameValid || !phoneValid || !ageValid) return;
+  
+      const formData = new FormData(this);
+      const orderId = window.orderId || "{{ order_id }}";
+  
+      fetch(`/contact_details?order_id=${orderId}`, {
+        method: "POST",
+        body: formData
+      })
+      .then(res => {
+        if (!res.ok) throw new Error("Failed to save contact details");
+        return res.json();
+      })
+      .then(() => {
+        gotoStep("essentials");
+      })
+      .catch(err => {
+        console.error("Error saving contact:", err.message);
+      });
+    });
+  
+  // Auto-format phone number as (555) 123-4567
+  phoneInput.addEventListener("input", function () {
+    let value = this.value.replace(/\\D/g, ""); // Remove all non-digits
+  
+    if (value.length > 10) value = value.slice(0, 10); // Limit to 10 digits
+  
+    let formatted = "";
+    if (value.length > 0) {
+      formatted += "(" + value.slice(0, 3);
+    }
+    if (value.length >= 4) {
+      formatted += ") " + value.slice(3, 6);
+    }
+    if (value.length >= 7) {
+      formatted += "-" + value.slice(6);
+    }
+  
+    this.value = formatted;
+  });
+  
+  </script>
+
+        </div>
+      </div>
+  
+      <!-- Right: Summary -->
+      <div class="sticky top-20 h-fit">
+        <div class="border rounded-xl shadow p-6 bg-white">
+          <h4 class="font-semibold text-lg mb-4">Summary</h4>
+          <div class="flex items-center gap-4 mb-4">
+            <img src="{{ url_for('static', filename='uploads/'~image_list[0]) }}" alt="{{puppy.name}}" class="w-16 h-16 rounded object-cover">
+            <div>
+              <p class="font-bold">{{puppy.name}}</p>
+              <p class="text-sm text-gray-500">{{puppy.gender}} • {{puppy.age}} weeks<br>Godlen Retriever</p>
+              <p class="text-xs text-gray-400">ID #{{puppy.id}}</p>
+            </div>
+          </div>
+          <hr class="my-4">
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between"><span>{{puppy.name}}</span><span>${{puppy.price}}</span></div>
+            <div class="flex justify-between font-medium"><span>Subtotal</span><span>${{puppy.price}}</span></div>
+            <div class="flex justify-between text-gray-500"><span>Tax</span><span>--</span></div>
+            <p class="text-xs text-gray-400 mt-1">Calculated once essentials are confirmed</p>
+          </div>
+          <hr class="my-4">
+          <div class="flex justify-between font-bold text-lg">
+            <span>Total</span><span>${{puppy.price}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

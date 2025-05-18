@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+<br>
+{% set current_step = session.get('step', 'details') %}
+{% set step_index = {'details': 0, 'delivery': 1, 'essentials': 2, 'payment': 3}[current_step] %}
+<div class="flex justify-center gap-16 border-b pb-4 mb-6 text-sm font-medium">
+<div class="text-center text-{{ 'green' if step_index >= 0 else 'gray' }}-700">
+  <svg class="mx-auto w-6 h-6 mb-1" fill="{{ 'green' if step_index >= 0 else 'gray' }}" viewBox="0 0 24 24">
+    <path d="M3 5a2 2 0 012-2h6a1 1 0 011 1v2h8a1 1 0 011 1v10a1 1 0 01-1 1h-8v2a1 1 0 01-1 1H5a2 2 0 01-2-2V5zm2 0v14h6V5H5z" />
+  </svg>
+  <p>Details</p>
+</div>
+
+<div class="w-10 border-t-2 mt-3 border-{{ 'green' if step_index >= 1 else 'gray' }}"></div>
+
+<div class="text-center text-{{ 'green' if step_index >= 1 else 'gray' }}-700">
+  <svg class="mx-auto w-6 h-6 mb-1" fill="{{ 'green' if step_index >= 1 else 'gray' }}" viewBox="0 0 24 24">
+    <path d="M3 3h18v2H3V3zm0 6h18v2H3V9zm0 6h18v2H3v-2zm0 6h18v2H3v-2z" />
+  </svg>
+  <p>Delivery</p>
+</div>
+
+<div class="w-10 border-t-2 mt-3 border-{{ 'green' if step_index >= 2 else 'gray' }}"></div>
+
+<div class="text-center text-{{ 'green' if step_index >= 2 else 'gray' }}-700">
+  <svg class="mx-auto w-6 h-6 mb-1" fill="{{ 'green' if step_index >= 2 else 'gray' }}" viewBox="0 0 24 24">
+    <path d="M20 6h-4V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v2h20V8a2 2 0 00-2-2zm0 4H2v10a2 2 0 002 2h16a2 2 0 002-2V10z" />
+  </svg>
+  <p>Essentials</p>
+</div>
+
+<div class="w-10 border-t-2 mt-3 border-{{ 'green' if step_index >= 3 else 'gray' }}"></div>
+
+<div class="text-center text-{{ 'green' if step_index >= 3 else 'gray' }}-700">
+  <svg class="mx-auto w-6 h-6 mb-1" fill="{{ 'green' if step_index >= 3 else 'gray' }}" viewBox="0 0 24 24">
+    <path d="M3 4h18a1 1 0 011 1v3H2V5a1 1 0 011-1zm19 5v10a1 1 0 01-1 1H3a1 1 0 01-1-1V9h20zm-8 3a2 2 0 100 4 2 2 0 000-4z" />
+      </svg>
+  </svg>
+  <p>Payment</p>
+</div>
+</div>
+<div class="flex justify-center gap-16 border-b pb-4 mb-6 text-sm font-medium">
+  <!-- Step Icons (unchanged from your version) -->
+</div>
+
+<!-- Loading Spinner -->
+<div id="overlay" class="fixed inset-0 bg-white bg-opacity-60 backdrop-blur-sm z-50 hidden items-center justify-center">
+  <div class="w-12 h-12 border-4 border-green-600 rounded-full spinner"></div>
+</div>
+
+<!-- Dynamic Step Container -->
+<div id="content" class="max-w-4xl mx-auto bg-white shadow-md p-8 mt-10 rounded-md"></div>
+
+<script>
+  let orderId = null;
+  let rand = null;
+  const selectedEssentials = {
+    "Starter Kit": 95,
+    "AKC Reunite Enrollment": 25
+  };
+
+  window.onload = () => {
+    const pathParts = window.location.pathname.split('/');
+    if (pathParts.length >= 6 && pathParts[1] == 'checkout' && pathParts[3] == 'order') {
+      orderId = pathParts[4];
+      rand = pathParts[5];
+      window.orderId = orderId;
+      window.rand = rand;
+
+      const fetchUrl = `/checkout/step/${pathParts[2]}/order/${orderId}/${rand}`;
+      const pushUrl = `/checkout/${pathParts[2]}/order/${orderId}/${rand}`;
+      loadStep(fetchUrl, pushUrl);
+    }
+  };
+
+  function loadStep(fetchUrl, pushUrl) {
+    const overlay = document.getElementById("overlay");
+    const content = document.getElementById("content");
+
+    overlay.style.display = "flex";
+    content.classList.add("blurred");
+    
+
+    fetch(fetchUrl, { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+      .then(res => {
+        if (!res.ok) throw new Error(`Fetch error ${res.status}`);
+        return res.text();
+      })
+      .then(html => {
+        content.innerHTML = html;
+        history.pushState({}, '', pushUrl);
+        overlay.style.display = "none";
+        content.classList.remove("blurred");
+        if (typeof initStep == 'function') initStep();
+
+        if (fetchUrl.includes('details')) setupDetailsValidation();
+        if (fetchUrl.includes('essentials')) setupEssentials();
+        if (fetchUrl.includes('delivery')) setupDelivery();
+      })
+      .catch(err => {
+        content.innerHTML = `<p class='text-red-600'>${err.message}</p>`;
+        overlay.style.display = "none";
+        content.classList.remove("blurred");
+      });
+  }
+
+  window.gotoStep = function (stepName) {
+    const fetchUrl = `/checkout/step/${stepName}/order/${orderId}/${rand}`;
+    const pushUrl = `/checkout/${stepName}/order/${orderId}/${rand}`;
+    loadStep(fetchUrl, pushUrl);
+  };
+
+  function setupDetailsValidation() {
+    const form = document.getElementById("deliveryform");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      fetch(`/contact_details?order_id=${orderId}`, {
+        method: "POST",
+        body: formData
+      })
+        .then(res => res.json())
+        .then(() => gotoStep("delivery"))
+        .catch(err => alert("Failed to save contact details"));
+    });
+  }
+
+  function setupEssentials() {
+    document.querySelectorAll('[data-item]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.getAttribute('data-item');
+        const price = name === "Starter Kit" ? 95 : 25;
+        toggleEssential(btn, name, price);
+      });
+    });
+
+    const submitBtn = document.getElementById("submit-essentials");
+    if (submitBtn) {
+      submitBtn.addEventListener("click", function () {
+        const supplies = Object.entries(selectedEssentials).map(([name, price]) => ({ name, price }));
+        fetch(`/essentials?order_id=${orderId}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ supplies })
+        })
+          .then(res => res.json())
+          .then(() => gotoStep("payment"))
+          .catch(err => alert("Failed to save essentials"));
+      });
+    }
+
+    updateSummary();
+  }
+
+  function toggleEssential(el, name, price) {
+    const addBtns = document.querySelectorAll(`.essential-add-btn[data-item="${name}"]`);
+    const remBtns = document.querySelectorAll(`.essential-btn[data-item="${name}"]`);
+    if (selectedEssentials[name]) {
+      delete selectedEssentials[name];
+      addBtns.forEach(btn => btn.style.display = "inline-block");
+      remBtns.forEach(btn => btn.style.display = "none");
+    } else {
+      selectedEssentials[name] = price;
+      addBtns.forEach(btn => btn.style.display = "none");
+      remBtns.forEach(btn => btn.style.display = "inline-block");
+    }
+    updateSummary();
+  }
+
+  function updateSummary() {
+    const base = parseFloat(document.querySelector("#puppy-price")?.textContent.replace(/[^0-9.]/g, "")) || 0;
+    const delivery = parseFloat(document.querySelector("#delivery-cost")?.textContent.replace(/[^0-9.]/g, "")) || 0;
+    const essentials = Object.values(selectedEssentials).reduce((a, b) => a + b, 0);
+    const total = base + delivery + essentials;
+
+    document.getElementById("summary-akc")?.classList.toggle('hidden', !selectedEssentials["AKC Reunite Enrollment"]);
+    document.getElementById("summary-starter")?.classList.toggle('hidden', !selectedEssentials["Starter Kit"]);
+    document.getElementById("summary-total").textContent = `$${total.toFixed(2)}`;
+  }
+
+  function setupDelivery() {
+    
+        // Re-bind selection logic
+        document.querySelectorAll(".option").forEach(option => {
+          option.addEventListener("click", function () {
+            document.querySelectorAll(".option").forEach(opt => {
+              opt.classList.remove("border-green-600");
+              const btn = opt.querySelector(".select-btn");
+              btn.textContent = "Select";
+              btn.classList.remove("bg-green-600", "text-white");
+            });
+
+            this.classList.add("border-green-600");
+            const btn = this.querySelector(".select-btn");
+            btn.textContent = "✓ Selected";
+            btn.classList.add("bg-green-600", "text-white");
+
+            // Cost extraction
+            let cost = 0;
+            const text = this.innerText;
+            if (text.includes("30")) cost = 30;
+            else if (text.includes("40")) cost = 40;
+
+            // Update cost display
+            const priceText = document.getElementById("puppyprice")?.textContent || "0";
+            const base = parseFloat(priceText.replace(/[^0-9.]/g, "")) || 0;
+            document.getElementById("delivery-cost").textContent = cost === 0 ? "FREE" : `$${cost.toFixed(2)}`;
+            document.getElementById("total-cost").textContent = `$${(base + cost).toFixed(2)}`;
+          });
+        });
+
+        // Attach submit
+        const btn = document.getElementById("delivery_btn");
+        if (btn) {
+          btn.addEventListener("click", submitDelivery);
+        }
+      }
+  
+
+  function submitDelivery() {
+    const selected = document.querySelector(".option.border-green-600");
+    if (!selected) return alert("Please select a delivery option.");
+
+    let type = selected.innerText.includes("near your home") ? "Near Home" :
+               selected.innerText.includes("Pickup near") ? "Pickup Near Breeder" :
+               "Door to Door";
+
+    let cost = selected.innerText.includes("30") ? 30 :
+               selected.innerText.includes("40") ? 40 : 0;
+
+    fetch(`/delivery?order_id=${orderId}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ delivery_type: type, delivery_cost: cost })
+    })
+      .then(res => res.json())
+      .then(() => gotoStep("essentials"))
+      .catch(err => alert("Error saving delivery: " + err));
+  }
+</script>
+<script>
+  document.getElementById('payment-button').addEventListener('click', async (event) => {
+    try {
+      const orderId = event.target.getAttribute('data-order-id');
+      const response = await fetch(`/place_adoption/${orderId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      const result = await response.json();
+      alert(result.message);
+      if (result.success) {
+        window.location.href = '/confirmation'; // Redirect to a confirmation page
+      }
+    } catch (error) {
+      alert('Error placing adoption: ' + error.message);
+    }
+  });
+</script>
+
+{% endblock %}

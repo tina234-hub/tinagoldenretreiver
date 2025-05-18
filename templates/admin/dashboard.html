@@ -1,0 +1,44 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Dashboard - Admin Panel{% endblock %}
+
+{% block heading %}Website Traffic{% endblock %}
+
+{% block content %}
+  <p class="text-gray-400">Recent traffic data for the last 7 days.</p>
+
+  <!-- Bar Chart for Traffic -->
+  <div class="bg-[#1b1b1b] p-6 rounded-lg shadow-md mt-6">
+    <h3 class="text-xl font-semibold mb-4">Website Traffic (Last 7 Days)</h3>
+    <canvas id="trafficChart"></canvas>
+  </div>
+
+  <script>
+    var ctx = document.getElementById('trafficChart').getContext('2d');
+    var trafficChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: {{ dates|tojson }},  // Dates from Flask
+        datasets: [{
+          label: 'Website Visits',
+          data: {{ visits|tojson }},  // Visit counts from Flask
+          backgroundColor: 'rgba(75, 192, 192, 0.5)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            beginAtZero: true
+          },
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+      
+    });
+  </script>
+{% endblock %}

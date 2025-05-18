@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Thank You{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto px-4 py-10 text-center">
+  <h1 class="text-3xl font-bold text-green-600 mb-4">Thank You for Your Purchase!</h1>
+
+  <p class="text-gray-700 text-lg mb-2">
+    Your adoption request for <span class="font-semibold text-green-700">{{ puppy.name }}</span> has been confirmed.
+  </p>
+  <p class="text-gray-600 text-sm mb-6">
+    A confirmation email has been sent to <strong>{{ order.customer_email }}</strong>.
+    Please check your inbox or spam folder for further process. If you don't receive it within 5 minutes, contact us at
+    <a href="mailto:{{ site.email }}" class="text-green-600 underline">{{ site.email }}</a>.
+  </p>
+
+  <!-- Puppy Image -->
+  <div class="mb-6">
+    {% set image_list = puppy.images.split(',') %}
+    <img 
+      src="{{ url_for('static', filename='Uploads/' ~ image_list[0]) }}" 
+      alt="{{ order.puppy_name }}" 
+      class="w-48 h-48 object-cover mx-auto rounded-lg shadow-md"
+    />
+  </div>
+
+ 
+
+  <!-- Optional Follow Up -->
+  <p class="text-sm text-gray-500">We’ll keep you updated with the delivery progress.</p>
+</div>
+{% endblock %}

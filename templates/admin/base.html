@@ -1,0 +1,80 @@
+<!-- templates/admin/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Admin Panel{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body class="bg-[#232323] text-white font-sans min-h-screen flex flex-col md:flex-row">
+
+  <!-- Sidebar for Desktop, collapses in mobile -->
+  <aside class="w-full md:w-64 bg-[#1b1b1b] p-6 md:h-screen fixed md:relative top-0 left-0 z-50 md:flex md:flex-col md:space-y-4">
+    <h1 class="text-2xl font-bold mb-6">{% if session.username %}
+      
+    {% endif %}{{session.username}}-Admin Panel</h1>
+    <nav class="space-y-4">
+      <a href="{{ url_for('admin.dashboard') }}" class="block hover:text-green-400">Dashboard</a>
+      <a href="{{ url_for('admin.puppies') }}" class="block hover:text-green-400">Puppies</a>
+      <a href="{{ url_for('edit.review') }}" class="block hover:text-green-400">Reviews</a>
+      <a href="/admin/orders" class="block hover:text-green-400">Orders</a>
+      <a href="/admin/smtp" class="block hover:text-green-400"> SMTP Settings</a>
+      <a href="{{ url_for('admin.settings') }}" class="block hover:text-green-400">Settings</a>
+      {% if session.admin_logged_in %}
+      <a href="{{ url_for('admin.logout') }}" class="block hover:text-green-400">Log Out</a>
+      {% else %}
+      <a href="{{ url_for('admin.login') }}" class="block hover:text-green-400">Log in</a>
+      {% endif %}
+      
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 p-8 md:ml-64 bg-[#232323]">
+    <h2 class="text-3xl font-semibold mb-4">{% block heading %}Admin{% endblock %}</h2>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Mobile Menu Toggle Button -->
+  <button id="mobile-menu-toggle" class="md:hidden fixed top-4 left-4 p-2 bg-[#1b1b1b] text-white rounded-lg">
+    <span class="block w-6 h-0.5 bg-white mb-1"></span>
+    <span class="block w-6 h-0.5 bg-white mb-1"></span>
+    <span class="block w-6 h-0.5 bg-white"></span>
+  </button>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 md:hidden hidden">
+    <div class="w-64 bg-[#1b1b1b] p-6 h-full">
+      <h1 class="text-2xl font-bold mb-6">{% if session.username %}
+      
+        {% endif %}{{session.username}}-Admin Panel</h1>
+      <nav class="space-y-4">
+        <a href="{{ url_for('admin.dashboard') }}" class="block hover:text-green-400">Dashboard</a>
+        <a href="{{ url_for('admin.puppies') }}" class="block hover:text-green-400">Puppies</a>
+        <a href="{{ url_for('edit.review') }}" class="block hover:text-green-400">Reviews</a>
+        <a href="/admin/orders" class="block hover:text-green-400">Orders</a>
+        <a href="/admin/smtp" lass="block hover:text-green-400"> SMTP Settings</a>
+        <a href="{{ url_for('admin.settings') }}" class="block hover:text-green-400">Settings</a>
+        {% if session.admin_logged_in %}
+        <a href="{{ url_for('admin.logout') }}" class="block hover:text-green-400">Log Out</a>
+        {% else %}
+        <a href="{{ url_for('admin.login') }}" class="block hover:text-green-400">Log in</a>
+        {% endif %}
+      </nav>
+    </div>
+  </div>
+
+  <script>
+    // Toggle the mobile menu
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

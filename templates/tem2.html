@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puppy Purchase Confirmation</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; margin: 20px auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    
+    <!-- Header -->
+    <tr>
+      <td style="padding: 20px; text-align: center; background-color: #4caf50; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+        <h1 style="color: #ffffff; margin: 0; font-size: 24px;">Thank You for Your Purchase!</h1>
+      </td>
+    </tr>
+    
+    <!-- Body -->
+    <tr>
+      <td style="padding: 20px;">
+        <p style="color: #333333; font-size: 16px; margin: 0 0 10px;">Dear {{ contact.name }},</p>
+        <p style="color: #333333; font-size: 16px; margin: 0 0 20px;">
+          Your adoption of <strong>{{ puppy.name }}</strong> is confirmed. Below are your order details along with tracking information.
+        </p>
+
+        <!-- Tracking Number -->
+        <h2 style="color: #4caf50; font-size: 18px; margin: 20px 0 10px;">Tracking Information</h2>
+        <p style="color: #666666; font-size: 14px; margin: 0 0 10px;">
+          <strong>Tracking Number:</strong> {{ tracking_number }}<br>
+          <strong>Track Here:</strong> 
+          <a href="{{ url_root }}track/{{ tracking_number }}" style="color: #4caf50; text-decoration: none;">
+            {{ url_root }}track/{{ tracking_number }}
+          </a>
+        </p>
+
+        <!-- Contact Details -->
+        <h2 style="color: #4caf50; font-size: 18px; margin: 20px 0 10px;">Contact Details</h2>
+        <p style="color: #666666; font-size: 14px; margin: 0;">
+          {{ contact.name }}<br>
+          {{ contact.email }}<br>
+          {{ contact.phone }}<br>
+          <strong>Delivery Address:</strong> {{ contact.address }}
+        </p>
+
+        <!-- Puppy Summary -->
+        <h2 style="color: #4caf50; font-size: 18px; margin: 20px 0 10px;">Your Puppy</h2>
+        {% set image_list = puppy.images.split(',') %}
+        <table width="100%" cellpadding="0" cellspacing="0" style="font-size: 14px; color: #666666; margin-bottom: 10px;">
+          <tr>
+            <td style="width: 80px; padding-right: 10px;">
+              <img src="{{ url_for('static', filename='Uploads/'~image_list[0], _external=True) }}" alt="{{ puppy.name }}" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
+            </td>
+            <td>
+              <strong>{{ puppy.name }}</strong><br>
+              {{ puppy.gender }} • {{ puppy.age }} weeks • Golden Retriever<br>
+              ID #{{ puppy.id }}
+            </td>
+            <td style="text-align: right; vertical-align: top;">${{ '%.2f' % puppy.price }}</td>
+          </tr>
+        </table>
+
+        <!-- Delivery -->
+        <h2 style="color: #4caf50; font-size: 18px; margin: 20px 0 10px;">Delivery</h2>
+        <table width="100%" cellpadding="0" cellspacing="0" style="font-size: 14px; color: #666666;">
+          <tr>
+            <td style="padding: 5px 0;">{{ delivery.delivery_type }}</td>
+            <td style="text-align: right;">${{ '%.2f' % delivery.delivery_cost }}</td>
+          </tr>
+        </table>
+
+        <!-- Essentials -->
+        {% if essentials %}
+        <h2 style="color: #4caf50; font-size: 18px; margin: 20px 0 10px;">Essentials & Puppy Care</h2>
+        <table width="100%" cellpadding="0" cellspacing="0" style="font-size: 14px; color: #666666;">
+          {% for item in essentials %}
+          <tr>
+            <td style="padding: 5px 0;">{{ item.name }}</td>
+            <td style="text-align: right;">${{ '%.2f' % item.price }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+        {% endif %}
+
+        <!-- Total -->
+        <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+        <table width="100%" cellpadding="0" cellspacing="0" style="font-size: 16px; color: #333333;">
+          <tr>
+            <td style="padding: 10px 0; font-weight: bold;">Total Paid</td>
+            <td style="text-align: right; font-weight: bold;">${{ '%.2f' % total }}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td style="padding: 20px; text-align: center; background-color: #f4f4f4; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+        <p style="color: #666666; font-size: 12px; margin: 0 0 10px;">
+          Follow us on social media:<br>
+          <a href="{{ site.facebook_link }}" style="color: #4caf50; text-decoration: none; margin: 0 10px;">Facebook</a> |
+          <a href="{{ site.ig_link }}" style="color: #4caf50; text-decoration: none; margin: 0 10px;">Instagram</a>
+        </p>
+        <p style="color: #666666; font-size: 12px; margin: 0;">
+          © <span id="currentYear"></span> Your Puppy Adoption Website. All rights reserved.<br>
+          <a href="#" id="websiteUrl" style="color: #4caf50; text-decoration: none;">Visit our website</a>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('websiteUrl').href = window.location.origin;
+    document.getElementById('websiteUrl').textContent = window.location.origin;
+  </script>
+</body>
+</html>
